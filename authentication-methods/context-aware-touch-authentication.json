@@ -1,0 +1,32 @@
+{
+  "methods": [
+    {
+      "name": "Context-Aware Touch Authentication",
+      "aliases": [],
+      "description": "Authentication method that combines password authentication with point-in-time implicit authentication based on touch dynamics and gestures. Uses context information (specifically body posture) to dynamically choose the implicit authentication model to use to improve robustness and reliability.",
+      "requirements": "Touchscreen, 3D sensors (accelerometer, gyroscope, magnetometer, ...)",
+      "authenticator": {
+        "name": "Password and touch dynamics",
+        "class": [
+          "Hybrid",
+          "Multi-factor"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Establish-only",
+        "interaction": "Active",
+        "locality": "Local",
+        "variability": "Dynamic",
+        "privacyPreservation": "Onymous",
+        "revocability": "Revocable",
+        "contextAwareness": "Context-aware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@article{wangContextAwareImplicitAuthentication2019,  title = {Context-{{Aware Implicit Authentication}} of {{Smartphone Users Based}} on {{Multi-Sensor Behavior}}},  author = {Wang, Renzhong and Tao, Dan},  year = {2019},  journal = {IEEE Access},  volume = {7},  pages = {119654--119667},  issn = {2169-3536},  doi = {10.1109/ACCESS.2019.2936034}}"
+      ]
+    }
+  ]
+}

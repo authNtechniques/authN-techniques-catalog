@@ -1,0 +1,32 @@
+{
+  "methods": [
+    {
+      "name": "Air Handwriting Authentication",
+      "aliases": [],
+      "description": "Authenticates users based on the unique behavioural characteristics of a user's handwriting in the air. The text to be written is chosen by the verifier, making this a challenge-response style authentication method. A 3D motion sensor is used to capture the 3D motions.",
+      "requirements": "3D motion sensor",
+      "authenticator": {
+        "name": "Behavioral characteristics of air handwriting",
+        "class": [
+          "Biometric-based",
+          "Behavioral"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Establish-only",
+        "interaction": "Active",
+        "locality": "Local",
+        "variability": "Dynamic",
+        "privacyPreservation": "Onymous",
+        "revocability": "Irrevocable",
+        "contextAwareness": "Context-unaware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@article{xuChallengeResponseAuthenticationUsing2020, title = {Challenge-{{Response Authentication Using In-Air Handwriting Style Verification}}}, author = {Xu, Wenyuan and Tian, Jing and Cao, Yu and Wang, Song}, year = {2020}, month = jan, journal = {IEEE Transactions on Dependable and Secure Computing}, volume = {17}, number = {1}, pages = {51--64}, issn = {1941-0018}, doi = {10.1109/TDSC.2017.2752164}}"
+      ]
+    }
+  ]
+}

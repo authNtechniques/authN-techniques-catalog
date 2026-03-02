@@ -1,0 +1,29 @@
+{
+  "techniques": [
+    {
+      "name": "Smart Card Authentication",
+      "aliases": [],
+      "description": "Authentication using a physical card with an embedded integrated circuit that stores cryptographic keys and can perform cryptographic operations.",
+      "requirements": "",
+      "facets": {
+        "authenticatorEmployment": ["Single"],
+        "sessionTrustContribution": ["Establish"],
+        "SubjectInteraction": ["Active"],
+        "locality": "Local",
+        "factor": "Possession-based",
+        "privacyPreservation": "Pseudonymous",
+        "revocability": "Revocable",
+        "contextuality": ["Context Unaware"],
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": ["Human"]
+      },
+      "sources": [
+        "@techreport{nistir7206,  title        = {Smart Cards and Mobile Device Authentication: An Overview and Implementation},  author       = {Jansen, Wayne and Gavrila, Serban and S{\\'e}veillac, Cl{\\'e}ment and Korolev, Vlad},  institution  = {National Institute of Standards and Technology},  number       = {NISTIR 7206},  year         = {2005},  doi          = {10.6028/NIST.IR.7206},  address      = {Gaithersburg, MD, USA}}"
+      ],
+      "authenticators": [
+        "Smart Card"
+      ]
+    }
+  ]
+}

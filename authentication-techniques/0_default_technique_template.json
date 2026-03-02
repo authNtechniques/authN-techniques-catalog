@@ -1,0 +1,25 @@
+{
+  "techniques": [
+    {
+      "name": "",
+      "aliases": [],
+      "description": "",
+      "requirements": "",
+      "facets": {
+        "authenticatorEmployment": [""],
+        "sessionTrustContribution": [""],
+        "SubjectInteraction": [""],
+        "locality": "",
+        "factor": "",
+        "privacyPreservation": "",
+        "revocability": "",
+        "contextuality": [""],
+        "uniqueness": "",
+        "directionality": "",
+        "subjectType": [""]
+      },
+      "sources": [],
+      "authenticators": []
+    }
+  ]
+}

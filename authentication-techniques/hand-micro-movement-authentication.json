@@ -1,0 +1,29 @@
+{
+  "techniques": [
+    {
+      "name": "Hand Micro-movement Authentication",
+      "aliases": [],
+      "description": "Passive authentication technique intended to improve existing authentication techniques by analyzing hand micro-movements using built-in 3D sensors in smartphones.",
+      "requirements": "Touchscreen, 3D sensors (accelerometer, gyroscope, magnetometer, ...)",
+      "facets": {
+        "authenticatorEmployment": ["Single"],
+        "sessionTrustContribution": ["Establish"],
+        "SubjectInteraction": ["Passive"],
+        "locality": "Local",
+        "factor": "Inherence-based",
+        "privacyPreservation": "Onymous",
+        "revocability": "Irrevocable",
+        "contextuality": ["Context Unaware"],
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": ["Human"]
+      },
+      "sources": [
+        "@inproceedings{buriroPleaseHoldUnobtrusive2017,  title = {Please Hold on: {{Unobtrusive}} User Authentication Using Smartphone's Built-in Sensors},  booktitle = {2017 {{IEEE International Conference}} on {{Identity}}, {{Security}} and {{Behavior Analysis}} ({{ISBA}})},  author = {Buriro, Attaullah and Crispo, Bruno and Zhauniarovich, Yury},  year = {2017},  month = feb,  pages = {1--8},  doi = {10.1109/ISBA.2017.7947684}}"
+      ],
+      "authenticators": [
+        "Hand micro-movement patterns"
+      ]
+    }
+  ]
+}

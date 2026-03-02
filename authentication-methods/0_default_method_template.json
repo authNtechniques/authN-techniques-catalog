@@ -1,0 +1,29 @@
+{
+  "methods": [
+    {
+      "name": "",
+      "aliases": [],
+      "description": "",
+      "requirements": "",
+      "authenticator": {
+        "name": "",
+        "class": [
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "",
+        "interaction": "",
+        "locality": "",
+        "variability": "",
+        "privacyPreservation": "",
+        "revocability": "",
+        "contextAwareness": "",
+        "uniqueness": "",
+        "directionality": "",
+        "subjectType": ""
+      },
+      "sources": [
+      ]
+    }
+  ]
+}

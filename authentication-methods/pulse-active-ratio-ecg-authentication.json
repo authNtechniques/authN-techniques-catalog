@@ -1,0 +1,33 @@
+{
+  "methods": [
+    {
+      "name": "Pulse Active Ratio (PAR) Electrocardiogram (ECG) Authentication",
+      "aliases": [],
+      "description": "ECG-based biometric authentication method that uses the Pulse Active Ratio (PAR) as a unique biometric authenticator.",
+      "requirements": "ECG equipment",
+      "authenticator": {
+        "name": "Pulse Active Ratio patterns",
+        "class": [
+          "Biometric-based",
+          "Physiological",
+          "Dynamic"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Establish-only",
+        "interaction": "Passive",
+        "locality": "Local",
+        "variability": "Dynamic",
+        "privacyPreservation": "Unspecified",
+        "revocability": "Irrevocable",
+        "contextAwareness": "Context-unaware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@article{safieElectrocardiogramECGBiometric2011,  title = {Electrocardiogram ({{ECG}}) {{Biometric Authentication Using Pulse Active Ratio}} ({{PAR}})},  author = {Safie, Sairul I. and Soraghan, John J. and Petropoulakis, Lykourgos},  year = {2011},  month = dec,  journal = {IEEE Transactions on Information Forensics and Security},  volume = {6},  number = {4},  pages = {1315--1322},  issn = {1556-6021},  doi = {10.1109/TIFS.2011.2162408}}"
+      ]
+    }
+  ]
+}

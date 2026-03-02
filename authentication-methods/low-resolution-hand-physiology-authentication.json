@@ -1,0 +1,33 @@
+{
+  "methods": [
+    {
+      "name": "Hand Physiology Authentication",
+      "aliases": [],
+      "description": "Biometric authentication method that extracts features from low-resolution images of the hand using a Radon transform. The method is designed to be peg-free and position invariant, making it more practical.",
+      "requirements": "Document scanner",
+      "authenticator": {
+        "name": "Physiological features of the hand",
+        "class": [
+          "Biometric-based",
+          "Physiological",
+          "Static"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Establish-only",
+        "interaction": "Active",
+        "locality": "Local",
+        "variability": "Static",
+        "privacyPreservation": "Onymous",
+        "revocability": "Irrevocable",
+        "contextAwareness": "Context-unaware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@inproceedings{mostayedBiometricAuthenticationLow2009,  title = {Biometric Authentication from Low Resolution Hand Images Using Radon Transform},  booktitle = {2009 12th {{International Conference}} on {{Computers}} and {{Information Technology}}},  author = {Mostayed, Ahmed and Kabir, Md. Ekramul and Khan, Saurav Zaman and Mazumder, Md. Mynuddin Gani},  year = {2009},  month = dec,  pages = {587--592},  doi = {10.1109/ICCIT.2009.5407305}}"
+      ]
+    }
+  ]
+}

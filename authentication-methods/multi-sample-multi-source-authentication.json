@@ -1,0 +1,32 @@
+{
+  "methods": [
+    {
+      "name": "Multi-Sample Multi-Source Biometric Authentication",
+      "aliases": [],
+      "description": "Composite biometric authentication method that combines multiple biometric features from different sources and samples to improve authentication accuracy and robustness.",
+      "requirements": "Multiple biometric sensors",
+      "authenticator": {
+        "name": "Combined biometric features",
+        "class": [
+          "Biometric-based",
+          "Composite"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Establish-only",
+        "interaction": "Active",
+        "locality": "Local",
+        "variability": "Unknown",
+        "privacyPreservation": "Onymous",
+        "revocability": "Irrevocable",
+        "contextAwareness": "Context-unaware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@inproceedings{pohMultisampleMultisourceModel2002,  title = {A Multi-Sample Multi-Source Model for Biometric Authentication},  booktitle = {Proceedings of the 12th {{IEEE Workshop}} on {{Neural Networks}} for {{Signal Processing}}},  author = {Poh, N. and Bengio, S. and Korczak, J.},  year = {2002},  month = sep,  pages = {375--384},  doi = {10.1109/NNSP.2002.1030049}}"
+      ]
+    }
+  ]
+}

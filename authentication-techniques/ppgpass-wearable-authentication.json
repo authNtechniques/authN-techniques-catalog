@@ -1,0 +1,29 @@
+{
+  "techniques": [
+    {
+      "name": "PPGPass Wearable Authentication",
+      "aliases": [],
+      "description": "Wearable-based authentication technique using photoplethysmogram (PPG) signals. The technique makes Irrevocable PPG signals revocable through non-invertible transformation.",
+      "requirements": "PPG sensor",
+      "facets": {
+        "authenticatorEmployment": ["Single"],
+        "sessionTrustContribution": ["Establish"],
+        "SubjectInteraction": ["Passive"],
+        "locality": "Local",
+        "factor": "Inherence-based",
+        "privacyPreservation": "Onymous",
+        "revocability": "Revocable",
+        "contextuality": ["Context Unaware"],
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": ["Human"]
+      },
+      "sources": [
+        "@inproceedings{caoPPGPassNonintrusiveSecure2020,  title = {{{PPGPass}}: {{Nonintrusive}} and {{Secure Mobile Two-Factor Authentication}} via {{Wearables}}},  booktitle = {{{IEEE INFOCOM}} 2020 - {{IEEE Conference}} on {{Computer Communications}}},  author = {Cao, Yetong and Zhang, Qian and Li, Fan and Yang, Song and Wang, Yu},  year = {2020},  month = jul,  pages = {1917--1926},  issn = {2641-9874},  doi = {10.1109/INFOCOM41043.2020.9155380}}"
+      ],
+      "authenticators": [
+        "Photoplethysmogram (PPG) pulse patterns"
+      ]
+    }
+  ]
+}

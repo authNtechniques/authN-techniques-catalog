@@ -1,0 +1,33 @@
+{
+  "methods": [
+    {
+      "name": "Face Feature Authentication",
+      "aliases": [],
+      "description": "Biometric authentication method that utilizes a novel approach to extracting features from human faces for improved authentication performance.",
+      "requirements": "Camera, Consistent lighting conditions",
+      "authenticator": {
+        "name": "Facial feature patterns",
+        "class": [
+          "Biometric-based",
+          "Physiological",
+          "Static"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Establish-only",
+        "interaction": "Active",
+        "locality": "Local",
+        "variability": "Static",
+        "privacyPreservation": "Onymous",
+        "revocability": "Irrevocable",
+        "contextAwareness": "Context-unaware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@inproceedings{srisukFaceAuthenticationUsing2003,  title = {Face Authentication Using the Trace Transform},  booktitle = {2003 {{IEEE Computer Society Conference}} on {{Computer Vision}} and {{Pattern Recognition}}, 2003. {{Proceedings}}.},  author = {Srisuk, S. and Petrou, M. and Kurutach, W. and Kadyrov, A.},  year = {2003},  month = jun,  volume = {1},  pages = {I-I},  issn = {1063-6919},  doi = {10.1109/CVPR.2003.1211368}}"
+      ]
+    }
+  ]
+}

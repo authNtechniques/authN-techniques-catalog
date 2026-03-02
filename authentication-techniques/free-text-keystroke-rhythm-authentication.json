@@ -1,0 +1,29 @@
+{
+  "techniques": [
+    {
+      "name": "Free-text Keystroke Rhythm Authentication",
+      "aliases": [],
+      "description": "Authentication technique that uses the timing of keystrokes and resulting rhythm to uniquely identify based on free text input.",
+      "requirements": "Keyboard",
+      "facets": {
+        "authenticatorEmployment": ["Single"],
+        "sessionTrustContribution": ["Establish"],
+        "SubjectInteraction": ["Active"],
+        "locality": "Local",
+        "factor": "Inherence-based",
+        "privacyPreservation": "Onymous",
+        "revocability": "Irrevocable",
+        "contextuality": ["Context Unaware"],
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": ["Human"]
+      },
+      "sources": [
+        "@inproceedings{singhKeyClassificationNew2011,  title = {Key {{Classification}}: {{A New Approach}} in {{Free Text Keystroke Authentication System}}},  booktitle = {2011 {{Third Pacific-Asia Conference}} on {{Circuits}}, {{Communications}} and {{System}} ({{PACCS}})},  author = {Singh, Saurabh and Arya, K. V.},  year = {2011},  month = jul,  pages = {1--5},  doi = {10.1109/PACCS.2011.5990168}}"
+      ],
+      "authenticators": [
+        "Keystroke Rhythm"
+      ]
+    }
+  ]
+}

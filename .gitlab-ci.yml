@@ -1,0 +1,14 @@
+pages:
+  image: node:22
+  stage: deploy
+  script:
+    - npm install
+    - npm ci
+    - npm run build
+    - mv public public-vue
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

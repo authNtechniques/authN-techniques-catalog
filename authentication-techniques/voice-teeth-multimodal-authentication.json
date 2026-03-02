@@ -1,0 +1,30 @@
+{
+  "techniques": [
+    {
+      "name": "Voice-Teeth Multimodal Authentication",
+      "aliases": [],
+      "description": "Multimodal biometric authentication scheme that combines voice features with teeth image characteristics captured simultaneously.",
+      "requirements": "Microphone, Camera",
+      "facets": {
+        "authenticatorEmployment": ["Multi", "Parallel"],
+        "sessionTrustContribution": ["Establish"],
+        "SubjectInteraction": ["Active"],
+        "locality": "Local",
+        "factor": "Inherence-based",
+        "privacyPreservation": "Onymous",
+        "revocability": "Unknown",
+        "contextuality": ["Context Unaware"],
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": ["Human"]
+      },
+      "sources": [
+        "@article{kimMultimodalBiometricAuthentication2008, title = {Multimodal Biometric Authentication Using Teeth Image and Voice in Mobile Environment}, author = {Kim, Dong-Su and Hong, Kwang-Seok}, year = {2008}, month = nov, journal = {IEEE Transactions on Consumer Electronics}, volume = {54}, number = {4}, pages = {1790--1797}, issn = {1558-4127}, doi = {10.1109/TCE.2008.4711236}}"
+      ],
+      "authenticators": [
+        "Teeth image",
+        "Voice features"
+      ]
+    }
+  ]
+}

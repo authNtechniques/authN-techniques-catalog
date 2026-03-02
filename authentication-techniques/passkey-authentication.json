@@ -1,0 +1,31 @@
+{
+  "techniques": [
+    {
+      "name": "Passkey Authentication",
+      "aliases": [
+        "FIDO2"
+      ],
+      "description": "Passkey authentication is a public-key–based authentication technique standardized by FIDO2/WebAuthn. A unique cryptographic key pair is generated per service. The private key is securely stored on the user’s device and unlocked locally using biometrics or a device PIN. Authentication is performed by signing a server challenge.",
+      "requirements": "",
+      "facets": {
+        "authenticatorEmployment": ["Single"],
+        "sessionTrustContribution": ["Establish"],
+        "SubjectInteraction": ["Active"],
+        "locality": "Remote",
+        "factor": "Possession-based",
+        "privacyPreservation": "Pseudonymous",
+        "revocability": "Revocable",
+        "contextuality": ["Context Unaware"],
+        "uniqueness": "Unique",
+        "directionality": "Bidirectional",
+        "subjectType": ["Human"]
+      },
+      "sources": [
+        "@techreport{webauthn2_w3c_2021,  title        = {Web Authentication: An API for accessing Public Key Credentials -- Level 2},  author       = {Hodges, Jeff and Jones, J.C. and Jones, Michael B. and Kumar, Akshay and Lundberg, Emil},  institution  = {World Wide Web Consortium (W3C)},  type         = {W3C Recommendation},  number       = {REC-webauthn-2-20210408},  year         = {2021},  month        = apr,  day          = {8},  url          = {https://www.w3.org/TR/webauthn-2/},  note         = {Accessed: 2026-01-05}}"
+      ],
+      "authenticators": [
+        "Cryptographic Private Key"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "authenticators": [
+    {
+      "name": "",
+      "description": "",
+      "authenticationFactor": [],
+      "interactionMode": [],
+      "subjectType": [],
+      "outputMode": "",
+      "sources": []
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "authentication-methods-web-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production && vue-cli-service build --mode production",
+    "build:dev": "cross-env NODE_ENV=dev && vue-cli-service build --mode development",
+    "serve": "cross-env NODE_ENV=dev && vue-cli-service serve --mode development"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-regular-svg-icons": "^5.7.2",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
+    "axios": "^0.18.0",
+    "babel-runtime": "^6.26.0",
+    "browserify-fs": "^1.0.0",
+    "citation-js": "^0.4.0-11",
+    "crossref": "^1.2.1",
+    "material-design-icons-iconfont": "^4.0.5",
+    "mathjs": "^5.7.0",
+    "node-fetch": "^1.7.3",
+    "require-dir": "^1.2.0",
+    "roboto-fontface": "^0.10.0",
+    "vue": "^2.6.8",
+    "vue-class-component": "^7.0.1",
+    "vue-clipboard2": "^0.3.0",
+    "vue-markdown": "^2.2.4",
+    "vue-property-decorator": "^8.0.0",
+    "vue-router": "^3.0.2",
+    "vue-toasted": "^1.1.26",
+    "vuetify": "^1.5.6",
+    "webpack-sources": "1.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.1",
+    "@vue/cli-plugin-typescript": "^3.5.1",
+    "@vue/cli-service": "^3.5.1",
+    "browser-request": "^0.3.3",
+    "copy-webpack-plugin": "^5.0.1",
+    "cross-env": "^6.0.0",
+    "merge-jsons-webpack-plugin": "^1.0.18",
+    "sass": "^1.85.0",
+    "sass-loader": "^7.1.0",
+    "typescript": "^5.9.3",
+    "vue-cli-plugin-vuetify": "^0.5.0",
+    "vue-template-compiler": "^2.6.8"
+  }
+}

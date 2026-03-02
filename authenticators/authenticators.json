@@ -1,0 +1,310 @@
+{
+  "authenticators": [
+    {
+      "name": "Behavioral features of rhythm input",
+      "description": "Behavioral biometric based on how a user performs a rhythm (timing dynamics and execution features) captured during input and matched to a template.",
+      "authenticationFactor": ["Inherence-based", "Behavioral"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Brain activity patterns",
+      "description": "Physiological biometric based on EEG-derived brain activity features captured during a task and matched to an enrolled template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently active"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Cryptographic Private Key",
+      "description": "A private asymmetric cryptographic key stored in software (e.g., a key file or browser credential store). Used to sign a challenge issued by the verifier; possession is proven without revealing the key.",
+      "authenticationFactor": ["Possession-based", "Digital"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human", "Machine"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "DRAM chip initialization patterns",
+      "description": "A physical unclonable function derived from DRAM power-up/initialization patterns, used as a device fingerprint for authentication.",
+      "authenticationFactor": ["Possession-based", "physical"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Machine"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Facial features",
+      "description": "Physiological biometric based on facial feature descriptors extracted from an image and compared against a stored template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Fingerprint",
+      "description": "A biometric authenticator based on the unique ridge and valley patterns of a person's fingertip. The fingerprint image is captured by a sensor and compared against a stored template using feature extraction algorithms.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently active"],
+      "subjectType": ["Human"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Gaze Password",
+      "description": "A knowledge factor entered via eye gaze; the user follows or fixates on targets in a specific sequence and timing to authenticate.",
+      "authenticationFactor": ["Knowledge-based", "Associative"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Group signature certificate",
+      "description": "A digital certificate and associated group-signature credentials that allow a device to prove membership in a group anonymously.",
+      "authenticationFactor": ["Possession-based", "Digital"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Machine"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Hand micro-movement patterns",
+      "description": "Behavioral biometric based on involuntary micro-movements of the hand measured by sensors and matched as a dynamic signature.",
+      "authenticationFactor": ["Inherence-based", "Behavioral"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Hand vein pattern",
+      "description": "Physiological biometric based on the vascular pattern of the hand captured with near-infrared imaging and compared to an enrolled template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Handwriting features",
+      "description": "Behavioral biometric based on distinctive handwriting or air-writing motion characteristics captured as time-series features and matched to an enrolled template.",
+      "authenticationFactor": ["Inherence-based", "Behavioral"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Hardware OTP Token",
+      "description": "A dedicated physical device that generates one-time passwords using a built-in clock and shared secret. The generated code is entered by the user and verified server-side.",
+      "authenticationFactor": ["Possession-based", "physical"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Heartbeat patterns",
+      "description": "Physiological biometric based on cardiac signatures (e.g., radar/ECG-like temporal patterns) captured passively and matched to an enrolled profile.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Initialization Key",
+      "description": "A digital secret (seed/shared key) used by a software OTP generator to derive one-time codes, proving possession of the initialized token state.",
+      "authenticationFactor": ["Possession-based", "Digital"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human", "Machine"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Iris patterns",
+      "description": "Physiological biometric based on unique iris texture patterns extracted from an eye image and compared to a stored template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Keystroke Rhythm",
+      "description": "Behavioral biometric based on typing cadence (dwell/flight times and rhythms) captured during text entry and matched to a template.",
+      "authenticationFactor": ["Inherence-based", "Behavioral"],
+      "interactionMode": ["Inherently active"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Knuckle shape",
+      "description": "Physiological biometric based on hand/knuckle geometry or surface features captured by an imaging sensor and matched to a template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Neuromuscular biometrics",
+      "description": "Physiological biometric based on neuromuscular signals (e.g., EMG) captured during a gesture or action and matched to an enrolled template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently active"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Photoplethysmogram (PPG) pulse patterns",
+      "description": "Physiological biometric based on PPG pulse waveform features captured by a wearable sensor and matched to an enrolled template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Physiological hand features",
+      "description": "Physiological biometric derived from measured hand characteristics (e.g., geometry/skin traits) captured during use and matched to a stored template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "PIN",
+      "description": "A short numeric or alphanumeric code memorised by the user, typically 4–8 digits. Entered via a keypad or touch screen and compared against a stored value.",
+      "authenticationFactor": ["Knowledge-based", "Free-recall"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human", "Machine"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Private cryptographic key with digital certificate",
+      "description": "An asymmetric private key used together with an associated digital certificate to authenticate by signing challenges and presenting certified public-key identity.",
+      "authenticationFactor": ["Possession-based", "Digital"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human", "Machine"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Pulse Active Ratio (PRA) patterns",
+      "description": "Physiological biometric derived from pulse active ratio features (from ECG-like signals) captured passively and matched to an enrolled profile.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "RFID tag",
+      "description": "A physical token containing an RFID identifier/secret that responds to reader challenges, enabling possession-based authentication.",
+      "authenticationFactor": ["Possession-based", "physical"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human", "Machine"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Smart Card",
+      "description": "A physical card containing an embedded microprocessor and cryptographic key material. Authentication is performed by inserting the card into a reader, which challenges the card to sign or decrypt data.",
+      "authenticationFactor": ["Possession-based", "physical"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Software OTP",
+      "description": "A one-time password generated by a software token (e.g., TOTP/HOTP application). Valid for a single session or short time window, derived from a shared secret using a cryptographic algorithm.",
+      "authenticationFactor": ["Possession-based", "Digital"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Spatio-temporal graphical password",
+      "description": "A knowledge factor where the user reproduces a visual/graphical pattern together with timing information (order and intervals) for verification.",
+      "authenticationFactor": ["Knowledge-based", "Associative"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Teeth image",
+      "description": "Physiological biometric based on dental/teeth image features extracted from a photo and compared against a stored template.",
+      "authenticationFactor": ["Inherence-based", "Physiological"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Temporal pattern",
+      "description": "A knowledge factor where the user reproduces a memorised timing/rhythm pattern (intervals) as the secret for verification.",
+      "authenticationFactor": ["Knowledge-based", "Free-recall"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Text Password",
+      "description": "A secret sequence of characters (letters, digits, symbols) chosen and memorised by the user. The user types the password and the system verifies it against a stored (hashed) value.",
+      "authenticationFactor": ["Knowledge-based", "Free-recall"],
+      "interactionMode": ["Inherently active", "Excludes passive"],
+      "subjectType": ["Human", "Machine"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Touch-interaction behavior",
+      "description": "Behavioral biometric based on patterns of interaction with a touch interface (timing, gestures, dynamics) captured passively and matched to a template.",
+      "authenticationFactor": ["Inherence-based", "Behavioral"],
+      "interactionMode": ["Inherently passive", "Excludes active"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Unique carrier frequency offset characteristics",
+      "description": "A physical-layer fingerprint derived from a transmitter’s carrier frequency offset characteristics, measured passively and compared to reference profiles.",
+      "authenticationFactor": ["Possession-based", "physical"],
+      "interactionMode": ["Inherently passive", "Excludes active"],
+      "subjectType": ["Machine"],
+      "outputMode": "Static",
+      "sources": []
+    },
+    {
+      "name": "Vertical foot acceleration patterns",
+      "description": "Behavioral biometric based on gait signatures extracted from vertical foot acceleration time-series captured passively and matched to a profile.",
+      "authenticationFactor": ["Inherence-based", "Behavioral"],
+      "interactionMode": ["Inherently passive"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    },
+    {
+      "name": "Voice features",
+      "description": "Physiological/behavioral biometric based on speaker-specific voice characteristics extracted from audio and matched to a stored voiceprint.",
+      "authenticationFactor": ["Inherence-based", "Physiological", "Behavioral"],
+      "interactionMode": ["Inherently active"],
+      "subjectType": ["Human"],
+      "outputMode": "Dynamic",
+      "sources": []
+    }
+  ]
+}

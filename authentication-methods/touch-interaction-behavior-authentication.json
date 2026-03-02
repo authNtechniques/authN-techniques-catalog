@@ -1,0 +1,32 @@
+{
+  "methods": [
+    {
+      "name": "Touch Interaction Behavior Authentication",
+      "aliases": [],
+      "description": "Continuous authentication method that utilizes touch interaction behavior, specifically analyzing features of swiping gestures to continuously authenticate users.",
+      "requirements": "Touchscreen",
+      "authenticator": {
+        "name": "Swiping gesture behavioral characteristics and touch interaction patterns",
+        "class": [
+          "Biometric-based",
+          "Behavioral"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Continuous-only",
+        "interaction": "Passive",
+        "locality": "Local",
+        "variability": "Dynamic",
+        "privacyPreservation": "Onymous",
+        "revocability": "Irrevocable",
+        "contextAwareness": "Context-unaware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@inproceedings{shenTouchinteractionBehaviorContinuous2015, title = {Touch-Interaction Behavior for Continuous User Authentication on Smartphones}, booktitle = {2015 {{International Conference}} on {{Biometrics}} ({{ICB}})}, author = {Shen, Chao and Zhang, Yong and Cai, Zhongmin and Yu, Tianwen and Guan, Xiaohong}, year = {2015}, month = may, pages = {157--162}, issn = {2376-4201}, doi = {10.1109/ICB.2015.7139046}}"
+      ]
+    }
+  ]
+}

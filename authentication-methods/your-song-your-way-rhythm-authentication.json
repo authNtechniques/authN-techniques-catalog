@@ -1,0 +1,32 @@
+{
+  "methods": [
+    {
+      "name": "Your Song Your Way Rhythm Authentication",
+      "aliases": [],
+      "description": "Two-factor authentication scheme that combines knowledge of a musical rhythm with the biometric characteristics of inputting that rhythm on a multitouch device.",
+      "requirements": "Touchscreen",
+      "authenticator": {
+        "name": "Rhythm and biometric input characteristics",
+        "class": [
+          "Hybrid",
+          "Multi-factor"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Establish-only",
+        "interaction": "Active",
+        "locality": "Local",
+        "variability": "Dynamic",
+        "privacyPreservation": "Onymous",
+        "revocability": "Revocable",
+        "contextAwareness": "Context-unaware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@inproceedings{chenYourSongYour2015, title = {Your Song Your Way: {{Rhythm-based}} Two-Factor Authentication for Multi-Touch Mobile Devices}, booktitle = {2015 {{IEEE Conference}} on {{Computer Communications}} ({{INFOCOM}})}, author = {Chen, Yimin and Sun, Jingchao and Zhang, Rui and Zhang, Yanchao}, year = {2015}, month = apr, pages = {2686--2694}, issn = {0743-166X}, doi = {10.1109/INFOCOM.2015.7218660}}"
+      ]
+    }
+  ]
+}

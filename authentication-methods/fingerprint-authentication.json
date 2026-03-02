@@ -1,0 +1,33 @@
+{
+  "methods": [
+    {
+      "name": "Fingerprint Authentication",
+      "aliases": [],
+      "description": "Authentication using unique fingerprint patterns and ridge characteristics.",
+      "requirements": "Fingerprint scanner or high-resolution camera, functioning fingerprints",
+      "authenticator": {
+        "name": "Fingerprint features",
+        "class": [
+          "Biometric-based",
+          "Physiological",
+          "Static"
+        ]
+      },
+      "facets": {
+        "sessionTrustContribution": "Establish-only",
+        "interaction": "Active",
+        "locality": "Local",
+        "variability": "Static",
+        "privacyPreservation": "Onymous",
+        "revocability": "Irrevocable",
+        "contextAwareness": "Context-unaware",
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": "Human"
+      },
+      "sources": [
+        "@book{maltoni2009handbook,  title={Handbook of fingerprint recognition},  author={Maltoni, Davide and Maio, Dario and Jain, Anil K and Prabhakar, Salil},  year={2009},  publisher={Springer}, doi = {10.1007/978-1-84882-254-2}}"
+      ]
+    }
+  ]
+}

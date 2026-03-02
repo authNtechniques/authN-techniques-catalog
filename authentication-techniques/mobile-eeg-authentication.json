@@ -1,0 +1,29 @@
+{
+  "techniques": [
+    {
+      "name": "Mobile EEG Authentication",
+      "aliases": [],
+      "description": "EEG-based authentication technique designed for mobile devices that relies on a separate server to collect and analyze EEG signals.",
+      "requirements": "EEG headset, Internet connectivity",
+      "facets": {
+        "authenticatorEmployment": ["Single"],
+        "sessionTrustContribution": ["Establish"],
+        "SubjectInteraction": ["Active"],
+        "locality": "Remote",
+        "factor": "Inherence-based",
+        "privacyPreservation": "Onymous",
+        "revocability": "Revocable",
+        "contextuality": ["Context Unaware"],
+        "uniqueness": "Unique",
+        "directionality": "Unidirectional",
+        "subjectType": ["Human"]
+      },
+      "sources": [
+        "@article{klonovsIDProofGo2013,  title = {{{ID Proof}} on the {{Go}}: {{Development}} of a {{Mobile EEG-Based Biometric Authentication System}}},  author = {Klonovs, Juris and Petersen, Christoffer Kjeldgaard and Olesen, Henning and Hammershoj, Allan},  year = {2013},  month = mar,  journal = {IEEE Vehicular Technology Magazine},  volume = {8},  number = {1},  pages = {81--89},  issn = {1556-6080},  doi = {10.1109/MVT.2012.2234056}}"
+      ],
+      "authenticators": [
+        "Brain activity patterns"
+      ]
+    }
+  ]
+}
