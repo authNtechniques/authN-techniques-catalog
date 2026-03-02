@@ -24,6 +24,6 @@ module.exports = {
       })
     ]
   },
-  publicPath: process.env.NODE_ENV === "production" ? "/security-patterns/authentication-methods-catalog/" : "/"
+  publicPath: process.env.NODE_ENV === "production" ? "/authN-techniques-catalog/" : "/"
   //publicPath: process.env.NODE_ENV === "production" ? "/" : "/"
 };
