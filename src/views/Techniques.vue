@@ -236,12 +236,6 @@ export default class Techniques extends Vue {
 
           const techniqueValues = Array.isArray(rawValue) ? rawValue : [rawValue];
 
-          if (facetKey === "authenticatorEmployment") {
-            const leaf =
-              techniqueValues.length > 0 ? techniqueValues[techniqueValues.length - 1] : "";
-            return !!leaf && selectedValues.includes(leaf);
-          }
-
           return techniqueValues.some((v) => selectedValues.includes(v));
         });
       }
