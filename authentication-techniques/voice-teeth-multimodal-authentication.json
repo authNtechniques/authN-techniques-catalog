@@ -23,7 +23,8 @@
       ],
       "authenticators": [
         "Teeth image",
-        "Voice features"
+        "Voice features Behavioral",
+        "Voice features Physiological"
       ]
     }
   ]

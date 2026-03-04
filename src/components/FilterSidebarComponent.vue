@@ -43,16 +43,37 @@
                 :key="node.name"
                 :node="node"
                 :selected-items="selectedFilters.authenticationFactors"
-                @toggle="toggleAuthenticationFactor"
+                @toggle="toggleAuthenticationFactorNode"
               />
             </v-card-text>
           </v-card>
         </v-expansion-panel-content>
 
-        <!-- Facet Filters -->
+        <!-- Facet: Authenticator Employment (hierarchical) -->
+        <v-expansion-panel-content v-if="authenticatorEmploymentTree.length > 0">
+          <template v-slot:header>
+            <div class="filter-section-header">
+              <span class="font-weight-medium">{{ formatFacetName('authenticatorEmployment') }}</span>
+            </div>
+          </template>
+          <v-card>
+            <v-card-text>
+              <hierarchy-tree-item-component
+                v-for="node in authenticatorEmploymentTree"
+                :key="node.name"
+                :node="node"
+                :selected-items="selectedFilters.facets['authenticatorEmployment']"
+                @toggle="toggleAuthenticatorEmploymentNode"
+              />
+            </v-card-text>
+          </v-card>
+        </v-expansion-panel-content>
+
+        <!-- Facet Filters (flat; skip authenticatorEmployment because it is rendered as a tree above) -->
         <v-expansion-panel-content
           v-for="[facetKey, facetValues] in availableFacets"
           :key="facetKey"
+          v-if="facetKey !== 'authenticatorEmployment'"
         >
           <template v-slot:header>
             <div class="filter-section-header">
@@ -88,12 +109,10 @@ import { Authenticator } from '@/common/authenticator';
 import { FilterAggregator, HierarchyNode, SelectedTechniqueFilters } from '@/common/filter-aggregator';
 import HierarchyTreeItemComponent from './HierarchyTreeItemComponent.vue';
 
-export { SelectedTechniqueFilters };
-
 @Component({
   components: {
     HierarchyTreeItemComponent,
-  }
+  },
 })
 export default class FilterSidebarComponent extends Vue {
   @Prop({ type: Boolean, default: false })
@@ -110,7 +129,7 @@ export default class FilterSidebarComponent extends Vue {
 
   private selectedFilters: SelectedTechniqueFilters = {
     authenticationFactors: [],
-    facets: {}
+    facets: {},
   };
 
   @Watch('visible')
@@ -127,8 +146,16 @@ export default class FilterSidebarComponent extends Vue {
     return FilterAggregator.buildAuthenticationFactorTree(this.allAuthenticators);
   }
 
+  get authenticatorEmploymentTree(): HierarchyNode[] {
+    return FilterAggregator.buildAuthenticatorEmploymentTree(this.authTechniques);
+  }
+
   get availableFacets(): Map<string, string[]> {
     return FilterAggregator.getAllFacetOptions(this.authTechniques);
+  }
+
+  public toggleAuthenticationFactorNode(node: HierarchyNode) {
+    this.toggleAuthenticationFactor(node.name);
   }
 
   public toggleAuthenticationFactor(name: string) {
@@ -141,10 +168,28 @@ export default class FilterSidebarComponent extends Vue {
     this.onFilterChange();
   }
 
+  public toggleAuthenticatorEmploymentNode(node: HierarchyNode) {
+    const key = 'authenticatorEmployment';
+    const selected: string[] = this.selectedFilters.facets[key] || [];
+    const index = selected.indexOf(node.name);
+    if (index > -1) {
+      selected.splice(index, 1);
+    } else {
+      selected.push(node.name);
+    }
+
+    this.selectedFilters.facets[key] = selected;
+    this.onFilterChange();
+  }
+
   get hasActiveFilters(): boolean {
-    if (this.selectedFilters.authenticationFactors.length > 0) return true;
+    if (this.selectedFilters.authenticationFactors.length > 0) {
+      return true;
+    }
     for (const key in this.selectedFilters.facets) {
-      if (this.selectedFilters.facets[key] && this.selectedFilters.facets[key].length > 0) return true;
+      if (this.selectedFilters.facets[key] && this.selectedFilters.facets[key].length > 0) {
+        return true;
+      }
     }
     return false;
   }
@@ -152,17 +197,6 @@ export default class FilterSidebarComponent extends Vue {
   public mounted() {
     this.drawerVisible = this.visible;
     this.initializeFacetFilters();
-  }
-
-  private initializeFacetFilters() {
-    const facetKeys: Array<keyof AuthenticationFacets> = [
-      'authenticatorEmployment', 'sessionTrustContribution', 'interaction', 'locality', 'factor',
-      'privacyPreservation', 'revocability', 'contextAwareness', 'uniqueness',
-      'directionality', 'subjectType'
-    ];
-    facetKeys.forEach(key => {
-      this.$set(this.selectedFilters.facets, key, []);
-    });
   }
 
   public formatFacetName(key: string): string {
@@ -175,7 +209,7 @@ export default class FilterSidebarComponent extends Vue {
 
   public clearAllFilters() {
     this.selectedFilters.authenticationFactors = [];
-    for (const key in this.selectedFilters.facets) {
+    for (const key of Object.keys(this.selectedFilters.facets)) {
       this.selectedFilters.facets[key] = [];
     }
     this.onFilterChange();
@@ -183,6 +217,17 @@ export default class FilterSidebarComponent extends Vue {
 
   public closeDrawer() {
     this.drawerVisible = false;
+  }
+
+  private initializeFacetFilters() {
+    const facetKeys: Array<keyof AuthenticationFacets> = [
+      'authenticatorEmployment', 'sessionTrustContribution', 'interaction', 'locality', 'factor',
+      'privacyPreservation', 'revocability', 'contextAwareness', 'uniqueness',
+      'directionality', 'subjectType',
+    ];
+    facetKeys.forEach((key) => {
+      this.$set(this.selectedFilters.facets, key, []);
+    });
   }
 }
 </script>

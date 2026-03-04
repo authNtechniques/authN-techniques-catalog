@@ -132,12 +132,10 @@ import { Authenticator } from '@/common/authenticator';
 import { FilterAggregator, HierarchyNode, SelectedAuthenticatorFilters } from '@/common/filter-aggregator';
 import HierarchyTreeItemComponent from './HierarchyTreeItemComponent.vue';
 
-export { SelectedAuthenticatorFilters };
-
 @Component({
   components: {
     HierarchyTreeItemComponent,
-  }
+  },
 })
 export default class AuthenticatorFilterSidebarComponent extends Vue {
   @Prop({ type: Boolean, default: false })

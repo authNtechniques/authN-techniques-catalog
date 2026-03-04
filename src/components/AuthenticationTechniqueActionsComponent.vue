@@ -17,14 +17,15 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import {AuthenticationTechnique} from '../common/authentication-technique';
+    import {AuthenticationTechnique} from '@/common/authentication-technique';
 
     @Component
     export default class AuthenticationTechniqueActionsComponent extends Vue {
         @Prop(Object) public authenticationTechnique!: AuthenticationTechnique;
 
         public get hasSources(): boolean {
-            return !!(this.authenticationTechnique && this.authenticationTechnique.sources && this.authenticationTechnique.sources.length > 0);
+            const t = this.authenticationTechnique;
+            return !!(t && t.sources && t.sources.length);
         }
 
         public copyToClipboard() {

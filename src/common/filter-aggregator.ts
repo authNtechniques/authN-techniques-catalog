@@ -29,9 +29,11 @@ export class FilterAggregator {
   public static buildTree(paths: string[][]): HierarchyNode[] {
     const rootNodes = new Map<string, HierarchyNode>();
 
-    paths.forEach(path => {
-      if (!path || path.length === 0) return;
+    paths.forEach((path) => {
+      if (!path || path.length === 0) {
+          return;
 
+      }
       path.forEach((name, index) => {
         const currentPath = path.slice(0, index + 1);
 
@@ -42,7 +44,7 @@ export class FilterAggregator {
         } else {
           const parent = this.findNodeByPath(Array.from(rootNodes.values()), currentPath.slice(0, -1));
           if (parent) {
-            const existingChild = parent.children.find(c => c.name === name);
+            const existingChild = parent.children.find((c) => c.name === name);
             if (!existingChild) {
               parent.children.push({ name, level: index, children: [], path: [...currentPath] });
             }
@@ -53,7 +55,7 @@ export class FilterAggregator {
 
     const sortTree = (nodes: HierarchyNode[]) => {
       nodes.sort((a, b) => a.name.localeCompare(b.name));
-      nodes.forEach(node => sortTree(node.children));
+      nodes.forEach((node) => sortTree(node.children));
     };
 
     const result = Array.from(rootNodes.values());
@@ -63,16 +65,31 @@ export class FilterAggregator {
 
   public static buildAuthenticationFactorTree(authenticators: Authenticator[]): HierarchyNode[] {
     const paths = authenticators
-      .filter(a => a.authenticationFactor && a.authenticationFactor.length > 0)
-      .map(a => a.authenticationFactor!);
+      .filter((a) => a.authenticationFactor && a.authenticationFactor.length > 0)
+      .map((a) => a.authenticationFactor!);
     return this.buildTree(paths);
   }
 
-  private static findNodeByPath(nodes: HierarchyNode[], path: string[]): HierarchyNode | null {
-    if (path.length === 0) return null;
-    const node = nodes.find(n => n.name === path[0]);
-    if (!node) return null;
-    if (path.length === 1) return node;
+  public static buildAuthenticatorEmploymentTree(techniques: AuthenticationTechnique[]): HierarchyNode[] {
+    const paths = techniques
+      .filter((t) =>
+          t.facets && Array.isArray(t.facets.authenticatorEmployment) && t.facets.authenticatorEmployment.length > 0)
+      .map((t) => (t.facets!.authenticatorEmployment as string[]).filter((p) => p && p.trim() !== ''));
+
+    return this.buildTree(paths.filter((p) => p.length > 0));
+  }
+
+  public static findNodeByPath(nodes: HierarchyNode[], path: string[]): HierarchyNode | null {
+    if (path.length === 0) {
+        return null;
+    }
+    const node = nodes.find((n) => n.name === path[0]);
+    if (!node) {
+        return null;
+    }
+    if (path.length === 1) {
+        return node;
+    }
     return this.findNodeByPath(node.children, path.slice(1));
   }
 
@@ -88,7 +105,9 @@ export class FilterAggregator {
           collectAll(node);
           return true;
         }
-        if (traverse(node.children)) return true;
+        if (traverse(node.children)) {
+            return true;
+        }
       }
       return false;
     };
@@ -96,7 +115,7 @@ export class FilterAggregator {
     return descendants;
   }
 
-  private static getLeafDescendants(node: HierarchyNode): string[] {
+  public static getLeafDescendants(node: HierarchyNode): string[] {
     const leaves: string[] = [];
     const traverse = (n: HierarchyNode) => {
       if (n.children.length === 0) {
@@ -110,18 +129,26 @@ export class FilterAggregator {
   }
 
   public static isNodeIndeterminate(node: HierarchyNode, selectedItems: string[]): boolean {
-    if (selectedItems.includes(node.name)) return false;
-    if (node.children.length === 0) return false;
+    if (selectedItems.includes(node.name)) {
+        return false;
+    }
+    if (node.children.length === 0) {
+        return false;
+    }
     const leaves = this.getLeafDescendants(node);
-    if (leaves.length === 0) return false;
-    const selectedCount = leaves.filter(l => selectedItems.includes(l)).length;
+    if (leaves.length === 0) {
+        return false;
+    }
+    const selectedCount = leaves.filter((l) => selectedItems.includes(l)).length;
     return selectedCount > 0 && selectedCount < leaves.length;
   }
 
   public static areAllDescendantsSelected(node: HierarchyNode, selectedItems: string[]): boolean {
-    const leaves = this.getLeafDescendants(node);
-    if (leaves.length === 0) return false;
-    return leaves.every(l => selectedItems.includes(l));
+      const leaves = this.getLeafDescendants(node);
+      if (leaves.length === 0) {
+          return false;
+      }
+      return leaves.every((l) => selectedItems.includes(l));
   }
 
   // ---------------------------------------------------------------------------
@@ -132,51 +159,61 @@ export class FilterAggregator {
     technique: AuthenticationTechnique,
     selectedFactors: string[],
     allAuthenticators: Authenticator[],
-    factorTree: HierarchyNode[]
+    factorTree: HierarchyNode[],
   ): boolean {
-    if (!technique.authenticators || technique.authenticators.length === 0) return false;
-    return selectedFactors.some(selectedFactor => {
+    if (!technique.authenticators || technique.authenticators.length === 0) {
+        return false;
+    }
+    return selectedFactors.some((selectedFactor) => {
       const descendants = new Set(this.getDescendants(factorTree, selectedFactor));
-      return technique.authenticators!.some(authName => {
-        const auth = allAuthenticators.find(a => a.name === authName);
-        if (!auth || !auth.authenticationFactor) return false;
-        return auth.authenticationFactor.some(f => descendants.has(f));
+      return technique.authenticators!.some((authName) => {
+        const auth = allAuthenticators.find((a) => a.name === authName);
+        if (!auth || !auth.authenticationFactor) {
+            return false;
+        }
+        return auth.authenticationFactor.some((f) => descendants.has(f));
       });
     });
   }
 
-    public static getFacetValues(
-        techniques: AuthenticationTechnique[],
-        facetKey: keyof AuthenticationFacets
-    ): string[] {
-        const valueSet = new Set<string>();
+  public static getFacetValues(
+      techniques: AuthenticationTechnique[],
+      facetKey: keyof AuthenticationFacets,
+  ): string[] {
+      const valueSet = new Set<string>();
 
-        techniques.forEach(t => {
-            if (!t.facets) return;
+      techniques.forEach((t) => {
+          if (!t.facets) {
+              return;
+          }
 
-            const value = t.facets[facetKey];
-            if (!value) return;
+          const value = t.facets[facetKey];
+          if (!value) {
+              return;
+          }
 
-            const values = Array.isArray(value) ? value : [value];
+          const values = Array.isArray(value) ? value : [value];
 
-            values
-                .filter(v => v && v.trim() !== '')
-                .forEach(v => valueSet.add(v));
-        });
+          values
+              .filter((v) => v && v.trim() !== '')
+              .forEach((v) => valueSet.add(v));
+      });
 
-        return Array.from(valueSet).sort();
+      return Array.from(valueSet).sort();
     }
 
   public static getAllFacetOptions(techniques: AuthenticationTechnique[]): Map<string, string[]> {
     const facetKeys: Array<keyof AuthenticationFacets> = [
       'authenticatorEmployment', 'sessionTrustContribution', 'interaction', 'locality', 'factor',
       'privacyPreservation', 'revocability', 'contextAwareness', 'uniqueness',
-      'directionality', 'subjectType'
+      'directionality', 'subjectType',
     ];
     const optionsMap = new Map<string, string[]>();
-    facetKeys.forEach(key => {
+    facetKeys.forEach((key) => {
       const values = this.getFacetValues(techniques, key);
-      if (values.length > 0) optionsMap.set(key, values);
+      if (values.length > 0) {
+          optionsMap.set(key, values);
+      }
     });
     return optionsMap;
   }
@@ -188,21 +225,26 @@ export class FilterAggregator {
   public static matchesAuthenticatorByFactor(
     authenticator: Authenticator,
     selectedFactors: string[],
-    factorTree: HierarchyNode[]
+    factorTree: HierarchyNode[],
   ): boolean {
-    if (!authenticator.authenticationFactor || authenticator.authenticationFactor.length === 0) return false;
-    return selectedFactors.some(selected => {
+    if (!authenticator.authenticationFactor || authenticator.authenticationFactor.length === 0) {
+        return false;
+    }
+    return selectedFactors.some((selected) => {
       const descendants = new Set(this.getDescendants(factorTree, selected));
-      return authenticator.authenticationFactor!.some(f => descendants.has(f));
+      return authenticator.authenticationFactor!.some((f) => descendants.has(f));
     });
   }
 
   public static getAuthenticatorFieldValues(authenticators: Authenticator[], field: keyof Authenticator): string[] {
     const valueSet = new Set<string>();
-    authenticators.forEach(a => {
+    authenticators.forEach((a) => {
       const val = a[field];
       if (Array.isArray(val)) {
-        (val as string[]).forEach((v: string) => { if (v && v.trim()) valueSet.add(v); });
+        (val as string[]).forEach((v: string) => { if (v && v.trim()) {
+            valueSet.add(v);
+            }
+        });
       } else if (typeof val === 'string' && val.trim()) {
         valueSet.add(val);
       }
@@ -219,7 +261,7 @@ export class FilterAggregator {
       .replace(/([A-Z])/g, ' $1')
       .trim()
       .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
   }
 }

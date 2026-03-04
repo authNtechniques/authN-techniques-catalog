@@ -25,7 +25,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import { HierarchyNode, FilterAggregator } from '@/common/filter-aggregator';
 
 @Component({
-  name: 'HierarchyTreeItemComponent'
+  name: 'HierarchyTreeItemComponent',
 })
 export default class HierarchyTreeItemComponent extends Vue {
   @Prop({ type: Object, required: true })
@@ -43,11 +43,11 @@ export default class HierarchyTreeItemComponent extends Vue {
   }
 
   public onToggle() {
-    this.$emit('toggle', this.node.name);
+    this.$emit('toggle', this.node);
   }
 
-  public onChildToggle(name: string) {
-    this.$emit('toggle', name);
+  public onChildToggle(node: HierarchyNode) {
+    this.$emit('toggle', node);
   }
 }
 </script>

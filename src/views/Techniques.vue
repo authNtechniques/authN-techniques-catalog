@@ -1,6 +1,6 @@
 <template>
   <div class="techniques-view">
-    <v-toolbar class="primary" app dark :extended="$vuetify.breakpoint.xs">
+    <v-toolbar class="primary techniques-topbar" fixed dark :extended="$vuetify.breakpoint.xs">
       <v-btn icon @click="toggleSidebar" class="hidden-md-and-up">
         <v-icon>filter_list</v-icon>
       </v-btn>
@@ -48,6 +48,9 @@
         <font-awesome-icon size="2x" :icon="['fab', 'gitlab']"></font-awesome-icon>
       </v-btn>
     </v-toolbar>
+
+    <div class="techniques-topbar-spacer"></div>
+
     <filter-sidebar-component
       :visible.sync="sidebarVisible"
       :auth-techniques="authTechniquesAll"
@@ -92,7 +95,7 @@ export default class Techniques extends Vue {
   private sidebarVisible: boolean = false;
   private selectedFilters: SelectedTechniqueFilters = {
     authenticationFactors: [],
-    facets: {}
+    facets: {},
   };
 
   public get slot() {
@@ -132,13 +135,13 @@ export default class Techniques extends Vue {
       } else if (Array.isArray(tData)) {
         techniques = tData;
       } else {
-        Object.keys(tData).forEach(key => {
+        Object.keys(tData).forEach((key) => {
           if (tData[key] && tData[key].techniques) {
             techniques = techniques.concat(tData[key].techniques);
           }
         });
       }
-      techniques.filter((t: AuthenticationTechnique) => t.name).forEach(t => {
+      techniques.filter((t: AuthenticationTechnique) => t.name).forEach((t) => {
         this.authTechniquesAll.push(t);
         this.authTechniques.push(t);
         this.authTechniquesFiltered.push(t);
@@ -152,13 +155,13 @@ export default class Techniques extends Vue {
       } else if (Array.isArray(aData)) {
         authenticators = aData;
       } else {
-        Object.keys(aData).forEach(key => {
+        Object.keys(aData).forEach((key) => {
           if (aData[key] && aData[key].authenticators) {
             authenticators = authenticators.concat(aData[key].authenticators);
           }
         });
       }
-      authenticators.filter((a: Authenticator) => a.name).forEach(a => {
+      authenticators.filter((a: Authenticator) => a.name).forEach((a) => {
         this.authenticatorsAll.push(a);
       });
 
@@ -207,29 +210,39 @@ export default class Techniques extends Vue {
 
     // Authentication factor cross-filter (OR logic: match any selected factor)
     if (this.selectedFilters.authenticationFactors.length > 0) {
-      filtered = filtered.filter(t =>
+      filtered = filtered.filter((t) =>
         FilterAggregator.matchesTechniqueByFactor(
           t,
           this.selectedFilters.authenticationFactors,
           this.authenticatorsAll,
-          this.authenticationFactorTree
-        )
+          this.authenticationFactorTree,
+        ),
       );
     }
 
     // Facet filters (OR within facet, AND across facets)
-    for (const facetKey in this.selectedFilters.facets) {
+    for (const facetKey of Object.keys(this.selectedFilters.facets)) {
       const selectedValues = this.selectedFilters.facets[facetKey];
       if (selectedValues && selectedValues.length > 0) {
-        filtered = filtered.filter(t => {
-          if (!t.facets) return false;
+        filtered = filtered.filter((t) => {
+          if (!t.facets) {
+            return false;
+          }
 
           const rawValue = (t.facets as any)[facetKey] as string | string[] | undefined | null;
-          if (!rawValue) return false;
+          if (!rawValue) {
+            return false;
+          }
 
           const techniqueValues = Array.isArray(rawValue) ? rawValue : [rawValue];
 
-          return techniqueValues.some(v => selectedValues.includes(v));
+          if (facetKey === "authenticatorEmployment") {
+            const leaf =
+              techniqueValues.length > 0 ? techniqueValues[techniqueValues.length - 1] : "";
+            return !!leaf && selectedValues.includes(leaf);
+          }
+
+          return techniqueValues.some((v) => selectedValues.includes(v));
         });
       }
     }
@@ -237,13 +250,15 @@ export default class Techniques extends Vue {
     // Search filter
     if (this.searchTerm) {
       const searchLower = this.searchTerm.toLowerCase();
-      filtered = filtered.filter(t => {
+      filtered = filtered.filter((t) => {
         const name = t.name ? t.name.toLowerCase() : "";
         const description = t.description ? t.description.toLowerCase() : "";
         let aliasMatch = false;
         if (t.aliases) {
-          t.aliases.forEach(a => {
-            if (a && a.toLowerCase().includes(searchLower)) aliasMatch = true;
+          t.aliases.forEach((a) => {
+            if (a && a.toLowerCase().includes(searchLower)) {
+              aliasMatch = true;
+            }
           });
         }
         return name.includes(searchLower) || description.includes(searchLower) || aliasMatch;
@@ -263,5 +278,16 @@ export default class Techniques extends Vue {
 
 .sidebar-offset {
   margin-left: 300px;
+}
+
+.techniques-topbar {
+  top: 48px; /* unter der fixed Tabs-Leiste aus App.vue */
+  left: 0;
+  right: 0;
+  z-index: 6; /* unter Tabs (z-index: 7), über Content */
+}
+
+.techniques-topbar-spacer {
+  height: 64px; /* Standard-Toolbar-Höhe (Desktop) */
 }
 </style>

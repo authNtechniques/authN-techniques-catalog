@@ -1,6 +1,6 @@
 <template>
   <div class="authenticators-view">
-    <v-toolbar class="primary" app dark :extended="$vuetify.breakpoint.xs">
+    <v-toolbar class="primary authenticators-topbar" fixed dark :extended="$vuetify.breakpoint.xs">
       <v-btn icon @click="toggleSidebar" class="hidden-md-and-up">
         <v-icon>filter_list</v-icon>
       </v-btn>
@@ -48,6 +48,9 @@
         <font-awesome-icon size="2x" :icon="['fab', 'gitlab']"></font-awesome-icon>
       </v-btn>
     </v-toolbar>
+
+    <div class="authenticators-topbar-spacer"></div>
+
     <authenticator-filter-sidebar-component
       :visible.sync="sidebarVisible"
       :authenticators="authenticatorsAll"
@@ -134,13 +137,13 @@ export default class Authenticators extends Vue {
       } else if (Array.isArray(aData)) {
         authenticators = aData;
       } else {
-        Object.keys(aData).forEach(key => {
+        Object.keys(aData).forEach((key) => {
           if (aData[key] && aData[key].authenticators) {
             authenticators = authenticators.concat(aData[key].authenticators);
           }
         });
       }
-      authenticators.filter((a: Authenticator) => a.name).forEach(a => {
+      authenticators.filter((a: Authenticator) => a.name).forEach((a) => {
         this.authenticatorsAll.push(a);
         this.authenticators.push(a);
         this.authenticatorsFiltered.push(a);
@@ -154,13 +157,13 @@ export default class Authenticators extends Vue {
       } else if (Array.isArray(tData)) {
         techniques = tData;
       } else {
-        Object.keys(tData).forEach(key => {
+        Object.keys(tData).forEach((key) => {
           if (tData[key] && tData[key].techniques) {
             techniques = techniques.concat(tData[key].techniques);
           }
         });
       }
-      techniques.filter((t: AuthenticationTechnique) => t.name).forEach(t => {
+      techniques.filter((t: AuthenticationTechnique) => t.name).forEach((t) => {
         this.techniquesAll.push(t);
       });
 
@@ -192,44 +195,44 @@ export default class Authenticators extends Vue {
 
     // Authentication factor filter
     if (this.selectedFilters.authenticationFactors.length > 0) {
-      filtered = filtered.filter(a =>
+      filtered = filtered.filter((a) =>
         FilterAggregator.matchesAuthenticatorByFactor(
           a,
           this.selectedFilters.authenticationFactors,
-          this.authenticationFactorTree
-        )
+          this.authenticationFactorTree,
+        ),
       );
     }
 
     // Interaction mode filter (OR logic)
     if (this.selectedFilters.interactionModes.length > 0) {
-      filtered = filtered.filter(a =>
-        a.interactionMode && a.interactionMode.some(m =>
-          this.selectedFilters.interactionModes.includes(m)
-        )
+      filtered = filtered.filter((a) =>
+        a.interactionMode && a.interactionMode.some((m) =>
+          this.selectedFilters.interactionModes.includes(m),
+        ),
       );
     }
 
     // Subject type filter (OR logic)
     if (this.selectedFilters.subjectTypes.length > 0) {
-      filtered = filtered.filter(a =>
-        a.subjectType && a.subjectType.some(s =>
-          this.selectedFilters.subjectTypes.includes(s)
-        )
+      filtered = filtered.filter((a) =>
+        a.subjectType && a.subjectType.some((s) =>
+          this.selectedFilters.subjectTypes.includes(s),
+        ),
       );
     }
 
     // Output mode filter (OR logic)
     if (this.selectedFilters.outputModes.length > 0) {
-      filtered = filtered.filter(a =>
-        a.outputMode && this.selectedFilters.outputModes.includes(a.outputMode)
+      filtered = filtered.filter((a) =>
+        a.outputMode && this.selectedFilters.outputModes.includes(a.outputMode),
       );
     }
 
     // Search filter
     if (this.searchTerm) {
       const searchLower = this.searchTerm.toLowerCase();
-      filtered = filtered.filter(a => {
+      filtered = filtered.filter((a) => {
         const name = a.name ? a.name.toLowerCase() : "";
         const description = a.description ? a.description.toLowerCase() : "";
         return name.includes(searchLower) || description.includes(searchLower);
@@ -245,5 +248,16 @@ export default class Authenticators extends Vue {
 <style scoped>
 .sidebar-offset {
   margin-left: 300px;
+}
+
+.authenticators-topbar {
+  top: 48px; /* unter der fixed Tabs-Leiste aus App.vue */
+  left: 0;
+  right: 0;
+  z-index: 6;
+}
+
+.authenticators-topbar-spacer {
+  height: 64px;
 }
 </style>

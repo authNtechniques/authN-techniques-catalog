@@ -111,9 +111,11 @@
         @Prop({ type: Array, default: () => [] }) public allTechniques!: AuthenticationTechnique[];
 
         get usedByTechniques(): AuthenticationTechnique[] {
-            if (!this.authenticator || !this.authenticator.name) return [];
-            return this.allTechniques.filter(t =>
-                t.authenticators && t.authenticators.includes(this.authenticator.name!)
+            if (!this.authenticator || !this.authenticator.name) {
+              return [];
+            }
+            return this.allTechniques.filter((t) =>
+                t.authenticators && t.authenticators.includes(this.authenticator.name!),
             );
         }
 
