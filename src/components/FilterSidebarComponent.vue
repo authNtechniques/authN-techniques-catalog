@@ -221,7 +221,7 @@ export default class FilterSidebarComponent extends Vue {
 
   private initializeFacetFilters() {
     const facetKeys: Array<keyof AuthenticationFacets> = [
-      'authenticatorEmployment', 'sessionTrustContribution', 'interaction', 'locality', 'factor',
+      'authenticatorEmployment', 'sessionTrustContribution', 'subjectInteraction', 'locality', 'factor',
       'privacyPreservation', 'revocability', 'contextAwareness', 'uniqueness',
       'directionality', 'subjectType',
     ];

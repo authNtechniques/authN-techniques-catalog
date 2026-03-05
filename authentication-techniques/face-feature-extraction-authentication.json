@@ -8,12 +8,12 @@
       "facets": {
         "authenticatorEmployment": ["Single"],
         "sessionTrustContribution": ["Establish"],
-        "SubjectInteraction": ["Active"],
+        "subjectInteraction": ["Active"],
         "locality": "Local",
         "factor": "Inherence-based",
         "privacyPreservation": "Onymous",
         "revocability": "Irrevocable",
-        "contextuality": ["Context Unaware"],
+        "contextAwareness": ["Context Unaware"],
         "uniqueness": "Unique",
         "directionality": "Unidirectional",
         "subjectType": ["Human"]
@@ -22,7 +22,7 @@
         "@inproceedings{srisukFaceAuthenticationUsing2003,  title = {Face Authentication Using the Trace Transform},  booktitle = {2003 {{IEEE Computer Society Conference}} on {{Computer Vision}} and {{Pattern Recognition}}, 2003. {{Proceedings}}.},  author = {Srisuk, S. and Petrou, M. and Kurutach, W. and Kadyrov, A.},  year = {2003},  month = jun,  volume = {1},  pages = {I-I},  issn = {1063-6919},  doi = {10.1109/CVPR.2003.1211368}}"
       ],
       "authenticators": [
-        "Facial featurs"
+        "Facial features"
       ]
     }
   ]

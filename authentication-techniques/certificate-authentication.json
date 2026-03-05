@@ -8,12 +8,12 @@
       "facets": {
         "authenticatorEmployment": ["Single"],
         "sessionTrustContribution": ["Establish"],
-        "SubjectInteraction": ["Active"],
+        "subjectInteraction": ["Active"],
         "locality": "Remote",
         "factor": "Possession-based",
         "privacyPreservation": "Onymous",
         "revocability": "Revocable",
-        "contextuality": ["Context Unaware"],
+        "contextAwareness": ["Context Unaware"],
         "uniqueness": "Unique",
         "directionality": "Unidirectional",
         "subjectType": ["Human", "Machine"]
@@ -22,7 +22,7 @@
         "@techreport{RFC5280, author = {Cooper, David and Santesson, Stefan and Farrell, Stephen and Boeyen, Steve and Housley, Russ and Polk, Tim}, title = {Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile}, institution = {Internet Engineering Task Force (IETF)}, type = {RFC}, number = {5280}, year = {2008}, month = {May}, issn = {2070-1721}, url = {https://www.rfc-editor.org/rfc/rfc5280}, doi = {10.17487/RFC5280}}, @techreport{RFC8446, author = {Rescorla, Eric}, title = {The Transport Layer Security (TLS) Protocol Version 1.3}, institution = {Internet Engineering Task Force (IETF)}, type = {RFC}, number = {8446}, year = {2018}, month = {August}, issn = {2070-1721}, url = {https://www.rfc-editor.org/rfc/rfc8446}, doi = {10.17487/RFC8446}}"
       ],
       "authenticators": [
-        "Cryptographic Private Key"
+        "Private Cryptographic Key"
       ]
     }
   ]

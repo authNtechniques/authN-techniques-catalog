@@ -8,12 +8,12 @@
       "facets": {
         "authenticatorEmployment": ["Multi", "Parallel"],
         "sessionTrustContribution": ["Establish"],
-        "SubjectInteraction": ["Active"],
+        "subjectInteraction": ["Active"],
         "locality": "Local",
         "factor": "Inherence-based",
         "privacyPreservation": "Onymous",
         "revocability": "Irrevocable",
-        "contextuality": ["Context Unaware"],
+        "contextAwareness": ["Context Unaware"],
         "uniqueness": "Unique",
         "directionality": "Unidirectional",
         "subjectType": ["Human"]
@@ -22,7 +22,7 @@
         "@inproceedings{pohMultisampleMultisourceModel2002,  title = {A Multi-Sample Multi-Source Model for Biometric Authentication},  booktitle = {Proceedings of the 12th {{IEEE Workshop}} on {{Neural Networks}} for {{Signal Processing}}},  author = {Poh, N. and Bengio, S. and Korczak, J.},  year = {2002},  month = sep,  pages = {375--384},  doi = {10.1109/NNSP.2002.1030049}}"
       ],
       "authenticators": [
-        "Facial featurs",
+        "Facial features",
         "Voice features"
       ]
     }

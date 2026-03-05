@@ -8,12 +8,12 @@
       "facets": {
         "authenticatorEmployment": ["Multi", "Sequential", "Ordered"],
         "sessionTrustContribution": ["Establish"],
-        "SubjectInteraction": ["Active"],
+        "subjectInteraction": ["Active", "Passive"],
         "locality": "Local",
         "factor": "Multi-factor",
         "privacyPreservation": "Onymous",
-        "revocability": "Revocable",
-        "contextuality": "State-based",
+        "revocability": "Irrevocable",
+        "contextAwareness": "State-based",
         "uniqueness": "Unique",
         "directionality": "Unidirectional",
         "subjectType": ["Human"]

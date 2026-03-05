@@ -10,12 +10,12 @@
       "facets": {
         "authenticatorEmployment": ["Single"],
         "sessionTrustContribution": ["Establish"],
-        "SubjectInteraction": ["Active"],
+        "subjectInteraction": ["Active"],
         "locality": "Remote",
         "factor": "Possession-based",
         "privacyPreservation": "Pseudonymous",
         "revocability": "Revocable",
-        "contextuality": ["Context Unaware"],
+        "contextAwareness": ["Context Unaware"],
         "uniqueness": "Unique",
         "directionality": "Bidirectional",
         "subjectType": ["Human"]
@@ -24,7 +24,7 @@
         "@techreport{webauthn2_w3c_2021,  title        = {Web Authentication: An API for accessing Public Key Credentials -- Level 2},  author       = {Hodges, Jeff and Jones, J.C. and Jones, Michael B. and Kumar, Akshay and Lundberg, Emil},  institution  = {World Wide Web Consortium (W3C)},  type         = {W3C Recommendation},  number       = {REC-webauthn-2-20210408},  year         = {2021},  month        = apr,  day          = {8},  url          = {https://www.w3.org/TR/webauthn-2/},  note         = {Accessed: 2026-01-05}}"
       ],
       "authenticators": [
-        "Cryptographic Private Key"
+        "Private Cryptographic Key"
       ]
     }
   ]

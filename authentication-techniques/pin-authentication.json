@@ -8,15 +8,15 @@
       "facets": {
         "authenticatorEmployment": ["Single"],
         "sessionTrustContribution": ["Establish"],
-        "SubjectInteraction": ["Active"],
+        "subjectInteraction": ["Active"],
         "locality": "Remote",
         "factor": "Knowledge-based",
         "privacyPreservation": "Unspecified",
         "revocability": "Revocable",
-        "contextuality": ["Context Unaware"],
+        "contextAwareness": ["Context Unaware"],
         "uniqueness": "Optionally Unique",
         "directionality": "Unidirectional",
-        "subjectType": ["Human", "Machine"]
+        "subjectType": ["Human"]
       },
       "sources": [
         "@inproceedings{bonneau2012quest,  title={The quest to replace passwords: A framework for comparative evaluation of web authentication schemes},  author={Bonneau, Joseph and Herley, Cormac and Van Oorschot, Paul C and Stajano, Frank},  booktitle={2012 IEEE Symposium on Security and Privacy},  pages={553--567},  year={2012},  doi={10.1109/SP.2012.44}}"

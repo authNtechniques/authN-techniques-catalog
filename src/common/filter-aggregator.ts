@@ -204,7 +204,7 @@ export class FilterAggregator {
 
   public static getAllFacetOptions(techniques: AuthenticationTechnique[]): Map<string, string[]> {
     const facetKeys: Array<keyof AuthenticationFacets> = [
-      'authenticatorEmployment', 'sessionTrustContribution', 'interaction', 'locality', 'factor',
+      'authenticatorEmployment', 'sessionTrustContribution', 'subjectInteraction', 'locality', 'factor',
       'privacyPreservation', 'revocability', 'contextAwareness', 'uniqueness',
       'directionality', 'subjectType',
     ];

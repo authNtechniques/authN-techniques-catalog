@@ -8,12 +8,12 @@
       "facets": {
         "authenticatorEmployment": ["Single"],
         "sessionTrustContribution": ["Establish"],
-        "SubjectInteraction": ["Active"],
+        "subjectInteraction": ["Active"],
         "locality": "Local",
         "factor": "Possession-based",
         "privacyPreservation": "Pseudonymous",
         "revocability": "Revocable",
-        "contextuality": ["Context Unaware"],
+        "contextAwareness": ["Context Unaware"],
         "uniqueness": "Unique",
         "directionality": "Unidirectional",
         "subjectType": ["Human"]

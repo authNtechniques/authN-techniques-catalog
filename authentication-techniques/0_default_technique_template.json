@@ -8,12 +8,12 @@
       "facets": {
         "authenticatorEmployment": [""],
         "sessionTrustContribution": [""],
-        "SubjectInteraction": [""],
+        "subjectInteraction": [""],
         "locality": "",
         "factor": "",
         "privacyPreservation": "",
         "revocability": "",
-        "contextuality": [""],
+        "contextAwareness": [""],
         "uniqueness": "",
         "directionality": "",
         "subjectType": [""]

@@ -8,12 +8,12 @@
       "facets": {
         "authenticatorEmployment": ["Single"],
         "sessionTrustContribution": ["Establish"],
-        "SubjectInteraction": ["Active"],
+        "subjectInteraction": ["Active"],
         "locality": "Local",
         "factor": "Inherence-based",
         "privacyPreservation": "Onymous",
         "revocability": "Irrevocable",
-        "contextuality": ["Context Unaware"],
+        "contextAwareness": ["Context Unaware"],
         "uniqueness": "Unique",
         "directionality": "Unidirectional",
         "subjectType": ["Human"]
@@ -22,7 +22,7 @@
         "@book{maltoni2009handbook,  title={Handbook of fingerprint recognition},  author={Maltoni, Davide and Maio, Dario and Jain, Anil K and Prabhakar, Salil},  year={2009},  publisher={Springer}, doi = {10.1007/978-1-84882-254-2}}"
       ],
       "authenticators": [
-        "Fingerprint"
+        "Fingerprint features"
       ]
     }
   ]

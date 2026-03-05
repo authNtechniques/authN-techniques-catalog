@@ -28,7 +28,7 @@ export class AuthenticationTechnique {
 export interface AuthenticationFacets {
     authenticatorEmployment?: string[];
     sessionTrustContribution?: string[];
-    interaction?: string[];
+    subjectInteraction?: string[];
     locality?: string;
     factor?: string;
     privacyPreservation?: string;
