@@ -1,0 +1,20 @@
+{
+  "authenticators": [
+    {
+      "name": "Smart Card",
+      "description": "A physical card containing an embedded microprocessor and cryptographic key material. Authentication is performed by inserting the card into a reader, which challenges the card to sign or decrypt data.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Physical"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

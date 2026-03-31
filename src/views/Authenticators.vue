@@ -47,6 +47,23 @@
       >
         <font-awesome-icon size="2x" :icon="['fab', 'gitlab']"></font-awesome-icon>
       </v-btn>
+      <v-dialog
+          content-class="help-dialog"
+          help-dialog
+          lazy
+          scrollable
+          v-model="dialog"
+          @keydown.esc="dialog = false"
+          width="1000px"
+      >
+        <v-btn icon slot="activator">
+          <font-awesome-icon
+              size="2x"
+              :icon="['far', 'question-circle']"
+          ></font-awesome-icon>
+        </v-btn>
+        <help-page-component v-model="dialog" :files="files" />
+      </v-dialog>
     </v-toolbar>
 
     <div class="authenticators-topbar-spacer"></div>
@@ -75,11 +92,15 @@ import { SelectedAuthenticatorFilters } from "../common/filter-aggregator";
 import { Authenticator } from "../common/authenticator";
 import { AuthenticationTechnique } from "../common/authentication-technique";
 import { FilterAggregator, HierarchyNode } from "../common/filter-aggregator";
+import HelpPageComponent from "@/components/HelpPageComponent.vue";
+import {MarkdownFile} from "@/common/markdown-file";
+import {config} from "@fortawesome/fontawesome-svg-core";
 
 @Component({
   components: {
     AuthenticatorsContainerComponent,
     AuthenticatorFilterSidebarComponent,
+    HelpPageComponent,
   },
 })
 export default class Authenticators extends Vue {
@@ -89,6 +110,8 @@ export default class Authenticators extends Vue {
   private techniquesAll: AuthenticationTechnique[] = [];
   private searchTerm: string = "";
   private sorting: string = "";
+  private dialog: boolean = false;
+  private files: MarkdownFile[] = [];
   private sortingItems = [
     { name: "name: A-Z", value: "name" },
     { name: "name: Z-A", value: "nameReverse" },
@@ -116,6 +139,26 @@ export default class Authenticators extends Vue {
 
   public created() {
     this.loadData();
+    this.loadMarkdownFiles();
+  }
+
+  public loadMarkdownFiles() {
+    const fileNames = ["README", "CONTRIBUTING"];
+    for (const name of fileNames) {
+      axios
+          .get(`assets/${name}.md`)
+          .then((response) => {
+            const position = fileNames.indexOf(name);
+            this.files.push({
+              name,
+              content: response.data,
+              position,
+            } as MarkdownFile);
+          })
+          .catch(() => {
+            this.$toasted.error("Failed to load " + name + ".md");
+          });
+    }
   }
 
   public mounted() {

@@ -1,0 +1,20 @@
+{
+  "authenticators": [
+    {
+      "name": "Unique carrier frequency offset characteristics",
+      "description": "A physical-layer fingerprint derived from a transmitter’s carrier frequency offset characteristics, measured passively and compared to reference profiles.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Physical"
+      ],
+      "interactionMode": [
+        "Inherently passive",
+        "Excludes active"
+      ],
+      "subjectType": [
+        "Machine"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

@@ -47,6 +47,23 @@
       >
         <font-awesome-icon size="2x" :icon="['fab', 'gitlab']"></font-awesome-icon>
       </v-btn>
+      <v-dialog
+          content-class="help-dialog"
+          help-dialog
+          lazy
+          scrollable
+          v-model="dialog"
+          @keydown.esc="dialog = false"
+          width="1000px"
+      >
+        <v-btn icon slot="activator">
+          <font-awesome-icon
+              size="2x"
+              :icon="['far', 'question-circle']"
+          ></font-awesome-icon>
+        </v-btn>
+        <help-page-component v-model="dialog" :files="files" />
+      </v-dialog>
     </v-toolbar>
 
     <div class="techniques-topbar-spacer"></div>
@@ -72,13 +89,17 @@ import { SelectedTechniqueFilters } from "../common/filter-aggregator";
 import { AuthenticationTechnique } from "../common/authentication-technique";
 import { Authenticator } from "../common/authenticator";
 import { FilterAggregator, HierarchyNode } from "../common/filter-aggregator";
+import HelpPageComponent from "@/components/HelpPageComponent.vue";
 import Cite from "citation-js";
 import { BibliographyTemplate } from "@/common/bibliography";
+import {MarkdownFile} from "@/common/markdown-file";
+import {im} from "mathjs";
 
 @Component({
   components: {
     AuthenticationTechniquesContainerComponent,
     FilterSidebarComponent,
+    HelpPageComponent,
   },
 })
 export default class Techniques extends Vue {
@@ -88,6 +109,8 @@ export default class Techniques extends Vue {
   private authenticatorsAll: Authenticator[] = [];
   private searchTerm: string = "";
   private sorting: string = "";
+  private dialog: boolean = false;
+  private files: MarkdownFile[] = [];
   private sortingItems = [
     { name: "name: A-Z", value: "name" },
     { name: "name: Z-A", value: "nameReverse" },
@@ -113,11 +136,31 @@ export default class Techniques extends Vue {
 
   public created() {
     this.loadData();
+    this.loadMarkdownFiles();
     this.loadCitationStyles();
   }
 
   public mounted() {
     this.sidebarVisible = this.$vuetify.breakpoint.mdAndUp;
+  }
+
+  public loadMarkdownFiles() {
+    const fileNames = ["README", "CONTRIBUTING"];
+    for (const name of fileNames) {
+      axios
+          .get(`assets/${name}.md`)
+          .then((response) => {
+            const position = fileNames.indexOf(name);
+            this.files.push({
+              name,
+              content: response.data,
+              position,
+            } as MarkdownFile);
+          })
+          .catch(() => {
+            this.$toasted.error("Failed to load " + name + ".md");
+          });
+    }
   }
 
   public async loadData() {

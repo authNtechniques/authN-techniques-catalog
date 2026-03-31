@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Pulse Active Ratio (PRA) patterns",
+      "description": "Physiological biometric derived from pulse active ratio features (from ECG-like signals) captured passively and matched to an enrolled profile.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

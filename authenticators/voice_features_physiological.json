@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Voice features Physiological",
+      "description": "Physiological biometric based on speaker-specific voice characteristics extracted from audio and matched to a stored voiceprint.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently active"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

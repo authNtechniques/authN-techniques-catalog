@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Teeth image",
+      "description": "Physiological biometric based on dental/teeth image features extracted from a photo and compared against a stored template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

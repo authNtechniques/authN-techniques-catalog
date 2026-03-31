@@ -1,0 +1,20 @@
+{
+  "authenticators": [
+    {
+      "name": "Hardware OTP Token",
+      "description": "A dedicated physical device that generates one-time passwords using a built-in clock and shared secret. The generated code is entered by the user and verified server-side.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Physical"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

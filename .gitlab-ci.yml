@@ -1,6 +1,8 @@
 pages:
   image: node:22
   stage: deploy
+  variables:
+    VUE_APP_REPO_URL: "https://gitlab.example.com/"
   script:
     - npm install
     - npm ci

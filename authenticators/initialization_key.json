@@ -1,0 +1,21 @@
+{
+  "authenticators": [
+    {
+      "name": "Initialization Key",
+      "description": "A digital secret (seed/shared key) used by a software OTP generator to derive one-time codes, proving possession of the initialized token state.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Digital"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human",
+        "Machine"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

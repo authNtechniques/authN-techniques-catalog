@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Fingerprint features",
+      "description": "A biometric authenticator based on the unique ridge and valley patterns of a person's fingertip. The fingerprint image is captured by a sensor and compared against a stored template using feature extraction algorithms.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently active"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

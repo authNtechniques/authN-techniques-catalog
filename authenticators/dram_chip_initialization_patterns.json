@@ -1,0 +1,20 @@
+{
+  "authenticators": [
+    {
+      "name": "DRAM chip initialization patterns",
+      "description": "A physical unclonable function derived from DRAM power-up/initialization patterns, used as a device fingerprint for authentication.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Physical"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Machine"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

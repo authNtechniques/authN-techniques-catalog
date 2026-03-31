@@ -1,0 +1,20 @@
+{
+  "authenticators": [
+    {
+      "name": "Handwriting features",
+      "description": "Behavioral biometric based on distinctive handwriting or air-writing motion characteristics captured as time-series features and matched to an enrolled template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Behavioral"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

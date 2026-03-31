@@ -1,0 +1,20 @@
+{
+  "authenticators": [
+    {
+      "name": "Temporal pattern",
+      "description": "A knowledge factor where the user reproduces a memorised timing/rhythm pattern (intervals) as the secret for verification.",
+      "authenticationFactor": [
+        "Knowledge-based",
+        "Free-recall"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

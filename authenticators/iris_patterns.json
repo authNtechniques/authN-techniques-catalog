@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Iris patterns",
+      "description": "Physiological biometric based on unique iris texture patterns extracted from an eye image and compared to a stored template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Hand vein pattern",
+      "description": "Physiological biometric based on the vascular pattern of the hand captured with near-infrared imaging and compared to an enrolled template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

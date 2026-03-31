@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Physiological hand features",
+      "description": "Physiological biometric derived from measured hand characteristics (e.g., geometry/skin traits) captured during use and matched to a stored template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

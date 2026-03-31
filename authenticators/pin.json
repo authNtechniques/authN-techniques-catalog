@@ -1,0 +1,21 @@
+{
+  "authenticators": [
+    {
+      "name": "PIN",
+      "description": "A short numeric or alphanumeric code memorised by the user, typically 4–8 digits. Entered via a keypad or touch screen and compared against a stored value.",
+      "authenticationFactor": [
+        "Knowledge-based",
+        "Free-recall"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human",
+        "Machine"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Photoplethysmogram (PPG) pulse patterns",
+      "description": "Physiological biometric based on PPG pulse waveform features captured by a wearable sensor and matched to an enrolled template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

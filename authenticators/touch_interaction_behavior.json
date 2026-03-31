@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Touch-interaction behavior",
+      "description": "Behavioral biometric based on patterns of interaction with a touch interface (timing, gestures, dynamics) captured passively and matched to a template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Behavioral"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Brain activity patterns",
+      "description": "Physiological biometric based on EEG-derived brain activity features captured during a task and matched to an enrolled template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently active"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

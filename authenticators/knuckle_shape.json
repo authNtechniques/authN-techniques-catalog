@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Knuckle shape",
+      "description": "Physiological biometric based on hand/knuckle geometry or surface features captured by an imaging sensor and matched to a template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

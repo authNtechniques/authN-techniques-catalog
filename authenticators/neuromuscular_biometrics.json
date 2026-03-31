@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Neuromuscular biometrics",
+      "description": "Physiological biometric based on neuromuscular signals (e.g., EMG) captured during a gesture or action and matched to an enrolled template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently active"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

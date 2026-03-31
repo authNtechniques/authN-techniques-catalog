@@ -1,0 +1,21 @@
+{
+  "authenticators": [
+    {
+      "name": "RFID tag",
+      "description": "A physical token containing an RFID identifier/secret that responds to reader challenges, enabling possession-based authentication.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Physical"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human",
+        "Machine"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

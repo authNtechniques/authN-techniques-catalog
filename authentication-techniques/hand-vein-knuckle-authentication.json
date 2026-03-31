@@ -6,7 +6,7 @@
       "description": "Composite biometric authentication technique that combines hand vein patterns with knuckle shape features for authenticating users.",
       "requirements": "Near infrared camera, Consistent lighting conditions",
       "facets": {
-        "authenticatorEmployment": ["Multi", "Sequential", "Ordered"],
+        "authenticatorEmployment": ["Multi", "Parallel"],
         "sessionTrustContribution": ["Establish"],
         "subjectInteraction": ["Active"],
         "locality": "Local",

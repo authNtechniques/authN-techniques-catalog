@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Hand micro-movement patterns",
+      "description": "Behavioral biometric based on involuntary micro-movements of the hand measured by sensors and matched as a dynamic signature.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Behavioral"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "authenticators": [
+    {
+      "name": "Group signature certificate",
+      "description": "A digital certificate and associated group-signature credentials that allow a device to prove membership in a group anonymously.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Digital"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Machine"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}
+

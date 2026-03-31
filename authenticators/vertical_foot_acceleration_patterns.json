@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Vertical foot acceleration patterns",
+      "description": "Behavioral biometric based on gait signatures extracted from vertical foot acceleration time-series captured passively and matched to a profile.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Behavioral"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

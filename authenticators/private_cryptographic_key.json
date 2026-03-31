@@ -1,0 +1,21 @@
+{
+  "authenticators": [
+    {
+      "name": "Private Cryptographic Key",
+      "description": "A private asymmetric cryptographic key stored in software (e.g., a key file or browser credential store). Used to sign a challenge issued by the verifier; possession is proven without revealing the key.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Digital"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human",
+        "Machine"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

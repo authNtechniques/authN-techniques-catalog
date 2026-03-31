@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Facial features",
+      "description": "Physiological biometric based on facial feature descriptors extracted from an image and compared against a stored template.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Static"
+    }
+  ]
+}

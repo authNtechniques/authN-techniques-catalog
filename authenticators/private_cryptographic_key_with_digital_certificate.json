@@ -1,0 +1,21 @@
+{
+  "authenticators": [
+    {
+      "name": "Private cryptographic key with digital certificate",
+      "description": "An asymmetric private key used together with an associated digital certificate to authenticate by signing challenges and presenting certified public-key identity.",
+      "authenticationFactor": [
+        "Possession-based",
+        "Digital"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
+      ],
+      "subjectType": [
+        "Human",
+        "Machine"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "authenticators": [
+    {
+      "name": "Heartbeat patterns",
+      "description": "Physiological biometric based on cardiac signatures (e.g., radar/ECG-like temporal patterns) captured passively and matched to an enrolled profile.",
+      "authenticationFactor": [
+        "Inherence-based",
+        "Physiological"
+      ],
+      "interactionMode": [
+        "Inherently passive"
+      ],
+      "subjectType": [
+        "Human"
+      ],
+      "outputMode": "Dynamic"
+    }
+  ]
+}
