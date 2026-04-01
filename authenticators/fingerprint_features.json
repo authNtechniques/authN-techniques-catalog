@@ -7,11 +7,11 @@
         "Inherence-based",
         "Physiological"
       ],
-      "interactionMode": [
-        "Inherently active"
-      ],
       "subjectType": [
         "Human"
+      ],
+      "interactionMode": [
+        "Inherently active"
       ],
       "outputMode": "Static"
     }

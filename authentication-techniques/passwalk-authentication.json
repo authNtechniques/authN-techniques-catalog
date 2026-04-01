@@ -6,17 +6,27 @@
       "description": "A multi-factor authentication technique that combines a textual password with active spatial interaction on a mobile mixed-reality headset. The user enters their password by selecting dynamically randomized characters using head-gaze while performing system-directed lateral foot movements, producing a time-constrained, spatial Authenticator Output that enhances resistance to observation attacks.",
       "requirements": "Mixed-reality headset with head-gaze tracking and foot-tracking capabilities",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Establish"],
-        "subjectInteraction": ["Active"],
-        "locality": "Local",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Knowledge-based",
+        "contextuality": [
+          "Spatial"
+        ],
+        "sessionTrustContribution": [
+          "Establish"
+        ],
+        "subject": [
+          "Human"
+        ],
+        "subjectInteraction": [
+          "Active"
+        ],
+        "directionality": "Unidirectional",
+        "locality": "Local",
         "privacyPreservation": "Onymous",
         "revocability": "Revocable",
-        "contextAwareness": ["Spatial"],
-        "uniqueness": "Optionally Unique",
-        "directionality": "Unidirectional",
-        "subjectType": ["Human"]
+        "uniqueness": "Optionally Unique"
       },
       "sources": [
         "@inproceedings{10.1145/3503161.3548252, author = {Kumar, Abhishek and Lee, Lik-Hang and Chauhan, Jagmohan and Su, Xiang and Hoque, Mohammad A. and Pirttikangas, Susanna and Tarkoma, Sasu and Hui, Pan}, title = {PassWalk: Spatial Authentication Leveraging Lateral Shift and Gaze on Mobile Headsets}, year = {2022}, isbn = {9781450392037}, publisher = {Association for Computing Machinery}, address = {New York, NY, USA}, url = {https://doi.org/10.1145/3503161.3548252}, doi = {10.1145/3503161.3548252}, booktitle = {Proceedings of the 30th ACM International Conference on Multimedia}, pages = {952–960}, numpages = {9}, ation = {Lisboa, Portugal}, series = {MM '22}}"

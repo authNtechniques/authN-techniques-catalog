@@ -6,17 +6,28 @@
       "description": "Mutual authentication protocol for low-powered RFID tags and readers that improves upon existing protocols.",
       "requirements": "",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Establish"],
-        "subjectInteraction": ["Active"],
-        "locality": "Local",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Possession-based",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Establish"
+        ],
+        "subject": [
+          "Human",
+          "Machine"
+        ],
+        "subjectInteraction": [
+          "Active"
+        ],
+        "directionality": "Bidirectional",
+        "locality": "Local",
         "privacyPreservation": "Pseudonymous",
         "revocability": "Revocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Unique",
-        "directionality": "Bidirectional",
-        "subjectType": ["Human", "Machine"]
+        "uniqueness": "Unique"
       },
       "sources": [
         "@inproceedings{huangUltralightweightRFIDReaderTag2015, title = {Ultralightweight {{RFID Reader-Tag Mutual Authentication}}}, booktitle = {2015 {{IEEE}} 39th {{Annual Computer Software}} and {{Applications Conference}}}, author = {Huang, Yu-Chung and Jiang, Jehn-Ruey}, year = {2015}, month = jul, volume = {3}, pages = {613--616}, issn = {0730-3157}, doi = {10.1109/COMPSAC.2015.106}}"

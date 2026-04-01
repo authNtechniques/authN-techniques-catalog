@@ -6,17 +6,28 @@
       "description": "Authentication technique that uses the vertical acceleration of the user's foot during the swing phase of the gait cycle as a biometric identifier.",
       "requirements": "Accelerometer sensor",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Establish", "Continuous"],
-        "subjectInteraction": ["Passive"],
-        "locality": "Local",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Inherence-based",
-        "privacyPreservation": "Onymous",
-        "revocability": "Irrevocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Not Unique",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Establish",
+          "Continuous"
+        ],
+        "subject": [
+          "Human"
+        ],
+        "subjectInteraction": [
+          "Passive"
+        ],
         "directionality": "Unidirectional",
-        "subjectType": ["Human"]
+        "locality": "Local",
+        "privacyPreservation": "Onymous",
+        "revocability": "Non-revocable",
+        "uniqueness": "Not Unique"
       },
       "sources": [
         "@inproceedings{teradaPerformanceGaitAuthentication2011,  title = {Performance of Gait Authentication Using an Acceleration Sensor},  booktitle = {2011 34th {{International Conference}} on {{Telecommunications}} and {{Signal Processing}} ({{TSP}})},  author = {Terada, Shuhei and Enomoto, Yusuke and Hanawa, Dai and Oguchi, Kimio},  year = {2011},  month = aug,  pages = {34--36},  doi = {10.1109/TSP.2011.6043780}}"

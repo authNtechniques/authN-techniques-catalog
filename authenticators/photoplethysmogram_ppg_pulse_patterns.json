@@ -7,11 +7,11 @@
         "Inherence-based",
         "Physiological"
       ],
-      "interactionMode": [
-        "Inherently passive"
-      ],
       "subjectType": [
         "Human"
+      ],
+      "interactionMode": [
+        "Inherently passive"
       ],
       "outputMode": "Dynamic"
     }

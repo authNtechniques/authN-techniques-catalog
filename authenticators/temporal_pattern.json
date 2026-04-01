@@ -7,12 +7,12 @@
         "Knowledge-based",
         "Free-recall"
       ],
+      "subjectType": [
+        "Human"
+      ],
       "interactionMode": [
         "Inherently active",
         "Excludes passive"
-      ],
-      "subjectType": [
-        "Human"
       ],
       "outputMode": "Dynamic"
     }

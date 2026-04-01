@@ -6,17 +6,27 @@
       "description": "Authentication technique using a short numeric string that the user must recall and enter.",
       "requirements": "Keyboard or touchscreen",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Establish"],
-        "subjectInteraction": ["Active"],
-        "locality": "Remote",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Knowledge-based",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Establish"
+        ],
+        "subject": [
+          "Human"
+        ],
+        "subjectInteraction": [
+          "Active"
+        ],
+        "directionality": "Unidirectional",
+        "locality": "Remote",
         "privacyPreservation": "Unspecified",
         "revocability": "Revocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Optionally Unique",
-        "directionality": "Unidirectional",
-        "subjectType": ["Human"]
+        "uniqueness": "Optionally Unique"
       },
       "sources": [
         "@inproceedings{bonneau2012quest,  title={The quest to replace passwords: A framework for comparative evaluation of web authentication schemes},  author={Bonneau, Joseph and Herley, Cormac and Van Oorschot, Paul C and Stajano, Frank},  booktitle={2012 IEEE Symposium on Security and Privacy},  pages={553--567},  year={2012},  doi={10.1109/SP.2012.44}}"

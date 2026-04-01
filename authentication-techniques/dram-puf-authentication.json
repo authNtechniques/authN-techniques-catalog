@@ -6,17 +6,27 @@
       "description": "Authentication technique using DRAM chips as Physically Unclonable Functions (PUFs) by analyzing their unique initialization behavior. The technique uses DRAM chips whose initialization patterns resemble PUF characteristics, creating Challenge-Response Pairs (CRPs) for device authentication.",
       "requirements": "DRAM memory chip",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Establish"],
-        "subjectInteraction": ["Active"],
-        "locality": "Remote",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Possession-based",
-        "privacyPreservation": "Onymous",
-        "revocability": "Irrevocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Unique",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Establish"
+        ],
+        "subject": [
+          "Machine"
+        ],
+        "subjectInteraction": [
+          "Active"
+        ],
         "directionality": "Unidirectional",
-        "subjectType": ["Machine"]
+        "locality": "Remote",
+        "privacyPreservation": "Onymous",
+        "revocability": "Non-revocable",
+        "uniqueness": "Unique"
       },
       "sources": [
         "@article{tehranipoorDRAMBasedIntrinsicPhysically2017,  title = {{{DRAM-Based Intrinsic Physically Unclonable Functions}} for {{System-Level Security}} and {{Authentication}}},  author = {Tehranipoor, Fatemeh and Karimian, Nima and Yan, Wei and Chandy, John A.},  year = {2017},  month = mar,  journal = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},  volume = {25},  number = {3},  pages = {1085--1097},  issn = {1557-9999},  doi = {10.1109/TVLSI.2016.2606658}}"

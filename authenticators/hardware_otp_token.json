@@ -7,12 +7,12 @@
         "Possession-based",
         "Physical"
       ],
+      "subjectType": [
+        "Human"
+      ],
       "interactionMode": [
         "Inherently active",
         "Excludes passive"
-      ],
-      "subjectType": [
-        "Human"
       ],
       "outputMode": "Dynamic"
     }

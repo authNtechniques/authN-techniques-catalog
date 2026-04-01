@@ -27,16 +27,16 @@ export class AuthenticationTechnique {
 
 export interface AuthenticationFacets {
     authenticatorEmployment?: string[];
-    sessionTrustContribution?: string[];
-    subjectInteraction?: string[];
-    locality?: string;
     factor?: string;
+    contextuality?: string[];
+    sessionTrustContribution?: string[];
+    subject?: string[];
+    subjectInteraction?: string[];
+    directionality?: string;
+    locality?: string;
     privacyPreservation?: string;
     revocability?: string;
-    contextAwareness?: string[];
     uniqueness?: string;
-    directionality?: string;
-    subjectType?: string[];
 }
 
 export interface RelatedItem {

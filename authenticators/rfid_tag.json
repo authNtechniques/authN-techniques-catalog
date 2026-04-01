@@ -7,13 +7,13 @@
         "Possession-based",
         "Physical"
       ],
-      "interactionMode": [
-        "Inherently active",
-        "Excludes passive"
-      ],
       "subjectType": [
         "Human",
         "Machine"
+      ],
+      "interactionMode": [
+        "Inherently active",
+        "Excludes passive"
       ],
       "outputMode": "Dynamic"
     }

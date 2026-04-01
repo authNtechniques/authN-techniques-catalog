@@ -7,11 +7,11 @@
         "Inherence-based",
         "Behavioral"
       ],
-      "interactionMode": [
-        "Inherently active"
-      ],
       "subjectType": [
         "Human"
+      ],
+      "interactionMode": [
+        "Inherently active"
       ],
       "outputMode": "Dynamic"
     }

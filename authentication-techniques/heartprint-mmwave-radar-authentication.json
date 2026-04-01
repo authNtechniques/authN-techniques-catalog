@@ -6,17 +6,28 @@
       "description": "Non-contact, passive, and continuous authentication technique that uses mmWave radar to detect skin surface vibrations caused by heartbeat patterns. Specifically designed to work in multi-user environments.",
       "requirements": "mmWave radar",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Establish", "Continuous"],
-        "subjectInteraction": ["Passive"],
-        "locality": "Local",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Inherence-based",
-        "privacyPreservation": "Onymous",
-        "revocability": "Irrevocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Unique",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Establish",
+          "Continuous"
+        ],
+        "subject": [
+          "Human"
+        ],
+        "subjectInteraction": [
+          "Passive"
+        ],
         "directionality": "Unidirectional",
-        "subjectType": ["Human"]
+        "locality": "Local",
+        "privacyPreservation": "Onymous",
+        "revocability": "Non-revocable",
+        "uniqueness": "Unique"
       },
       "sources": [
         "@article{wangHeartPrintExploringHeartbeatBased2022,  title = {{{HeartPrint}}: {{Exploring}} a {{Heartbeat-Based Multiuser Authentication With Single mmWave Radar}}},  author = {Wang, Yao and Gu, Tao and Luan, Tom H. and Lyu, Minjie and Li, Yue},  year = {2022},  month = dec,  journal = {IEEE Internet of Things Journal},  volume = {9},  number = {24},  pages = {25324--25336},  issn = {2327-4662},  doi = {10.1109/JIOT.2022.3196143}}"

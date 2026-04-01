@@ -7,12 +7,12 @@
         "Possession-based",
         "Physical"
       ],
+      "subjectType": [
+        "Machine"
+      ],
       "interactionMode": [
         "Inherently passive",
         "Excludes active"
-      ],
-      "subjectType": [
-        "Machine"
       ],
       "outputMode": "Static"
     }

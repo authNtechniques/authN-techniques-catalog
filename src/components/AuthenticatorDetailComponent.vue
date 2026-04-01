@@ -28,8 +28,22 @@
                 </div>
             </div>
 
+            <div v-if="authenticator.subjectType && authenticator.subjectType.length > 0" class="mb-3">
+              <strong>Subject:</strong>
+              <div class="mt-2">
+                <v-chip
+                    v-for="type in authenticator.subjectType"
+                    :key="type"
+                    small
+                    class="mr-1 mb-1"
+                >
+                  {{type}}
+                </v-chip>
+              </div>
+            </div>
+
             <div v-if="authenticator.interactionMode && authenticator.interactionMode.length > 0" class="mb-3">
-                <strong>Interaction Mode:</strong>
+                <strong>Interaction:</strong>
                 <div class="mt-2">
                     <v-chip
                         v-for="mode in authenticator.interactionMode"
@@ -42,22 +56,8 @@
                 </div>
             </div>
 
-            <div v-if="authenticator.subjectType && authenticator.subjectType.length > 0" class="mb-3">
-                <strong>Subject Type:</strong>
-                <div class="mt-2">
-                    <v-chip
-                        v-for="type in authenticator.subjectType"
-                        :key="type"
-                        small
-                        class="mr-1 mb-1"
-                    >
-                        {{type}}
-                    </v-chip>
-                </div>
-            </div>
-
             <div v-if="authenticator.outputMode" class="mb-3">
-              <strong>Output Mode:</strong>
+              <strong>Output:</strong>
 
               <div class="mt-2">
                 <v-chip

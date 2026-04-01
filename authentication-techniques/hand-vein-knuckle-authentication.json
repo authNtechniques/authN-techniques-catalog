@@ -6,17 +6,28 @@
       "description": "Composite biometric authentication technique that combines hand vein patterns with knuckle shape features for authenticating users.",
       "requirements": "Near infrared camera, Consistent lighting conditions",
       "facets": {
-        "authenticatorEmployment": ["Multi", "Parallel"],
-        "sessionTrustContribution": ["Establish"],
-        "subjectInteraction": ["Active"],
-        "locality": "Local",
+        "authenticatorEmployment": [
+          "Multi",
+          "Parallel"
+        ],
         "factor": "Inherence-based",
-        "privacyPreservation": "Onymous",
-        "revocability": "Irrevocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Unique",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Establish"
+        ],
+        "subject": [
+          "Human"
+        ],
+        "subjectInteraction": [
+          "Active"
+        ],
         "directionality": "Unidirectional",
-        "subjectType": ["Human"]
+        "locality": "Local",
+        "privacyPreservation": "Onymous",
+        "revocability": "Non-revocable",
+        "uniqueness": "Unique"
       },
       "sources": [
         "@article{kumarPersonalAuthenticationUsing2009,  title = {Personal {{Authentication Using Hand Vein Triangulation}} and {{Knuckle Shape}}},  author = {Kumar, Ajay and Prathyusha, K. Venkata},  year = {2009},  month = sep,  journal = {IEEE Transactions on Image Processing},  volume = {18},  number = {9},  pages = {2127--2136},  issn = {1941-0042},  doi = {10.1109/TIP.2009.2023153}}"

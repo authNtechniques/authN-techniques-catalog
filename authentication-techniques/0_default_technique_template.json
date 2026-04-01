@@ -7,16 +7,16 @@
       "requirements": "",
       "facets": {
         "authenticatorEmployment": [""],
-        "sessionTrustContribution": [""],
-        "subjectInteraction": [""],
-        "locality": "",
         "factor": "",
+        "contextuality": [""],
+        "sessionTrustContribution": [""],
+        "subject": [""],
+        "subjectInteraction": [""],
+        "directionality": "",
+        "locality": "",
         "privacyPreservation": "",
         "revocability": "",
-        "contextAwareness": [""],
-        "uniqueness": "",
-        "directionality": "",
-        "subjectType": [""]
+        "uniqueness": ""
       },
       "sources": [],
       "authenticators": []

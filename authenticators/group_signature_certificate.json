@@ -7,15 +7,14 @@
         "Possession-based",
         "Digital"
       ],
+      "subjectType": [
+        "Machine"
+      ],
       "interactionMode": [
         "Inherently active",
         "Excludes passive"
-      ],
-      "subjectType": [
-        "Machine"
       ],
       "outputMode": "Dynamic"
     }
   ]
 }
-

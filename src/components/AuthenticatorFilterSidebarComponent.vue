@@ -49,11 +49,35 @@
           </v-card>
         </v-expansion-panel-content>
 
+        <!-- Subject Type -->
+        <v-expansion-panel-content v-if="subjectTypeValues.length > 0">
+          <template v-slot:header>
+            <div class="filter-section-header">
+              <span class="font-weight-medium">Subject</span>
+            </div>
+          </template>
+          <v-card>
+            <v-card-text>
+              <v-checkbox
+                  v-for="value in subjectTypeValues"
+                  :key="value"
+                  v-model="selectedFilters.subjectTypes"
+                  :label="value"
+                  :value="value"
+                  color="primary"
+                  hide-details
+                  class="filter-checkbox"
+                  @change="onFilterChange"
+              ></v-checkbox>
+            </v-card-text>
+          </v-card>
+        </v-expansion-panel-content>
+
         <!-- Interaction Mode -->
         <v-expansion-panel-content v-if="interactionModeValues.length > 0">
           <template v-slot:header>
             <div class="filter-section-header">
-              <span class="font-weight-medium">Interaction Mode</span>
+              <span class="font-weight-medium">Interaction</span>
             </div>
           </template>
           <v-card>
@@ -73,35 +97,11 @@
           </v-card>
         </v-expansion-panel-content>
 
-        <!-- Subject Type -->
-        <v-expansion-panel-content v-if="subjectTypeValues.length > 0">
-          <template v-slot:header>
-            <div class="filter-section-header">
-              <span class="font-weight-medium">Subject Type</span>
-            </div>
-          </template>
-          <v-card>
-            <v-card-text>
-              <v-checkbox
-                v-for="value in subjectTypeValues"
-                :key="value"
-                v-model="selectedFilters.subjectTypes"
-                :label="value"
-                :value="value"
-                color="primary"
-                hide-details
-                class="filter-checkbox"
-                @change="onFilterChange"
-              ></v-checkbox>
-            </v-card-text>
-          </v-card>
-        </v-expansion-panel-content>
-
         <!-- Output Mode -->
         <v-expansion-panel-content v-if="outputModeValues.length > 0">
           <template v-slot:header>
             <div class="filter-section-header">
-              <span class="font-weight-medium">Output Mode</span>
+              <span class="font-weight-medium">Output</span>
             </div>
           </template>
           <v-card>

@@ -6,17 +6,27 @@
       "description": "Group signature-based authentication technique for vehicles with a focus on privacy preservation. Allows authentication to charging networks without revealing vehicle identity while proving membership in a group of vehicles and allowing revocation of individual memberships.",
       "requirements": "Public key infrastructure (PKI)",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Establish"],
-        "subjectInteraction": ["Active"],
-        "locality": "Remote",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Possession-based",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Establish"
+        ],
+        "subject": [
+          "Machine"
+        ],
+        "subjectInteraction": [
+          "Active"
+        ],
+        "directionality": "Unidirectional",
+        "locality": "Remote",
         "privacyPreservation": "Anonymous",
         "revocability": "Revocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Unique",
-        "directionality": "Unidirectional",
-        "subjectType": ["Machine"]
+        "uniqueness": "Unique"
       },
       "sources": [
         "@article{chenAnonymousAuthenticationScheme2015,  title = {An Anonymous Authentication Scheme for Plug-in Electric Vehicles Joining to Charging/Discharging Station in Vehicle-to-{{Grid}} ({{V2G}}) Networks},  author = {Chen, Jie and Zhang, Yueyu and Su, Wencong},  year = {2015},  month = mar,  journal = {China Communications},  volume = {12},  number = {3},  pages = {9--19},  issn = {1673-5447},  doi = {10.1109/CC.2015.7084359}}"

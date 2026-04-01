@@ -6,17 +6,27 @@
       "description": "Continuous physical layer authentication technique based on the unique carrier frequency offset (CFO) of hardware. The technique uniquely operates on the physical layer and is intended to be used in conjunction with a classical point-in-time authentication technique.",
       "requirements": "Radio hardware",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Continuous"],
-        "subjectInteraction": ["Passive"],
-        "locality": "Local",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Possession-based",
-        "privacyPreservation": "Onymous",
-        "revocability": "Irrevocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Unique",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Continuous"
+        ],
+        "subject": [
+          "Machine"
+        ],
+        "subjectInteraction": [
+          "Passive"
+        ],
         "directionality": "Unidirectional",
-        "subjectType": ["Machine"]
+        "locality": "Local",
+        "privacyPreservation": "Onymous",
+        "revocability": "Non-revocable",
+        "uniqueness": "Unique"
       },
       "sources": [
         "@article{houPhysicalLayerAuthentication2014a,  title = {Physical {{Layer Authentication}} for {{Mobile Systems}} with {{Time-Varying Carrier Frequency Offsets}}},  author = {Hou, Weikun and Wang, Xianbin and Chouinard, Jean-Yves and Refaey, Ahmed},  year = {2014},  month = may,  journal = {IEEE Transactions on Communications},  volume = {62},  number = {5},  pages = {1658--1667},  issn = {1558-0857},  doi = {10.1109/TCOMM.2014.032914.120921}}"

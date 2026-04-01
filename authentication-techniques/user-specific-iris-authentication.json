@@ -6,17 +6,27 @@
       "description": "Iris-based biometric authentication technique that uses a genetic algorithm to select different iris features for each user to improve reliability.",
       "requirements": "Camera, Consistent lighting conditions",
       "facets": {
-        "authenticatorEmployment": ["Single"],
-        "sessionTrustContribution": ["Establish"],
-        "subjectInteraction": ["Active"],
-        "locality": "Local",
+        "authenticatorEmployment": [
+          "Single"
+        ],
         "factor": "Inherence-based",
-        "privacyPreservation": "Onymous",
-        "revocability": "Irrevocable",
-        "contextAwareness": ["Context Unaware"],
-        "uniqueness": "Unique",
+        "contextuality": [
+          "Context Unaware"
+        ],
+        "sessionTrustContribution": [
+          "Establish"
+        ],
+        "subject": [
+          "Human"
+        ],
+        "subjectInteraction": [
+          "Active"
+        ],
         "directionality": "Unidirectional",
-        "subjectType": ["Human"]
+        "locality": "Local",
+        "privacyPreservation": "Onymous",
+        "revocability": "Non-revocable",
+        "uniqueness": "Unique"
       },
       "sources": [
         "@inproceedings{qiUserSpecificIrisAuthentication2008, title = {User-{{Specific Iris Authentication Based}} on {{Feature Selection}}}, booktitle = {2008 {{International Conference}} on {{Computer Science}} and {{Software Engineering}}}, author = {Qi, Miao and Lu, Yinghua and Li, Jinsong and Li, Xiaolu and Kong, Jun}, year = {2008}, month = dec, volume = {1}, pages = {1040--1043}, doi = {10.1109/CSSE.2008.1060}}"
